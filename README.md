@@ -32,6 +32,10 @@ Good Memoriesは、お子様の成長記録や友達との思い出を写真に�
 ## チャレンジ要素一覧
 <https://docs.google.com/spreadsheets/d/1uMI7uMgCaMtABI_Kj8O0PpaN0olXxAEOj6_LYkKAVJU/edit?usp=sharing>
 
+## AI追加機能
+アクセス解析機能（Googleアナリティクス等）
+可能なら、アクセス者の位置情報を解析できるものを追加したいです。
+
 ## 開発環境
 - OS：Linux(CentOS)
 - 言語：HTML,CSS,JavaScript,Ruby,SQL
