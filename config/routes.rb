@@ -19,8 +19,6 @@ Rails.application.routes.draw do
 
   scope module: :customer do
 
-
-
     resource :customers, only: [:show, :edit, :update] do
       collection do
         get "unsubsclibe"
@@ -50,8 +48,16 @@ Rails.application.routes.draw do
 
   end
 
+  # 管理者
+  namespace :admin do
 
+    resources :homes
+    resources :tags, except: [:show, :new]
+    resources :customers, except: [:new, :create, :destroy]
+    resources :reserves, only: [:index, :show]
+    resources :contacts, except: [:show, :new, :destroy]
+    resources :calenders, only: [:index, :new, :create]
 
-
+  end
 
 end
