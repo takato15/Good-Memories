@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   #顧客
   root to: "customer/plans#index"
   get "/about" => "customer/homes#about"
+  get "/photographs" => "customer/homes#index"
 
   scope module: :customer do
 
