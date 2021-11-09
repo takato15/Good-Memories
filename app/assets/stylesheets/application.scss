@@ -13,3 +13,34 @@
  *= require_tree .
  *= require_self
  */
+ @import "bootstrap";
+
+
+ header{
+  background-color: #e6f0f0;
+  color: #888888;
+ }
+ .navbar{
+  background-color: #e6f0f0;
+ }
+ footer{
+  height:100px;
+  font-family: 'Noto Sans JP',serif;
+  background-color: #e6f0f0;
+	 background-size: cover;
+	 background-position: center;
+  width: 100%;
+ }
+
+ .footer-text {
+  color: #888888;
+ }
+
+ .text-light {
+  color: #888888!important;
+ }
+
+ .slider-image {
+  height: 400px;
+  width :100%;
+ }
