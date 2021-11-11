@@ -2,11 +2,12 @@
 // # All this logic will automatically be available in application.js.
 // # You can use CoffeeScript in this file: http://coffeescript.org/
 
+
 document.addEventListener("turbolinks:load"
 , function () {
   $(function() {
   // 一旦hide()で隠してフェードインさせる
-    $('h4').hide().fadeIn(3000);
+    $('.slider-text').hide().fadeIn(3000);
 
   });
 })

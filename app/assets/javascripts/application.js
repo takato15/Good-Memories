@@ -20,12 +20,16 @@
 //= require turbolinks
 //= require_tree .
 
-$(function() {
-    $('.bxslider').slick({
-        dots: true,
-        autoplay: true,
-        autoplaySpeed: 6000,
-        fade: true,
-    });
-});
 
+// ターボリンク無効化:document.addEventListener("turbolinks:load")
+document.addEventListener("turbolinks:load"
+, function () {
+    $(function() {
+        $('.bxslider').slick({
+            dots: true,
+            autoplay: true,
+            autoplaySpeed: 6000,
+            fade: true,
+        });
+    });
+  })
