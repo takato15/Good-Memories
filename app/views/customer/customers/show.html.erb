@@ -1,6 +1,6 @@
 <%= flash[:notice] %>
 
-<div class="container px-5 px-sm-0" style="margin-bottom: 150px;">
+<div class="container mt-5 " style="margin-bottom: 150px;">
   <div class="row">
     <div class="col-md-12">
         <div class="mypage",style="text-align:center">
@@ -12,30 +12,30 @@
         </tr>
       </table>
 
-      <table class="customer_info">
+      <table class="table table-bordered customer_info">
         <tr>
           <th>氏名</th>
-          <td><%= @customer.last_name %>　<%= @customer.first_name %></td>
+          <td class="mypage-item"><%= @customer.last_name %>　<%= @customer.first_name %></td>
         </tr>
         <tr>
           <th>カナ</th>
-          <td><%= @customer.last_name_kana %>　<%= @customer.first_name_kana %></td>
+          <td class="mypage-item"><%= @customer.last_name_kana %>　<%= @customer.first_name_kana %></td>
         </tr>
         <tr>
           <th>郵便番号</th>
-          <td><%= @customer.post_cord %></td>
+          <td class="mypage-item"><%= @customer.post_cord %></td>
         </tr>
         <tr>
           <th>住所</th>
-          <td><%= @customer.address %></td>
+          <td class="mypage-item"><%= @customer.address %></td>
         </tr>
         <tr>
           <th>電話番号</th>
-          <td><%= @customer.phone_number %></td>
+          <td class="mypage-item"><%= @customer.phone_number %></td>
         </tr>
         <tr>
           <th>メールアドレス</th>
-          <td><%= @customer.email %></td>
+          <td class="mypage-item"><%= @customer.email %></td>
         </tr>
       </table>
 
