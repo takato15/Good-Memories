@@ -27,7 +27,18 @@ Rails.application.routes.draw do
       end
     end
 
-    resources :plans, only: [:index, :show, :create]
+    resources :plans, only: [:index, :show, :create] do
+      collection do
+        post "bridal"
+        post "seizinnshiki"
+        post "maternity"
+        post "child"
+        post "trip"
+        post "couple"
+        post "shichigosan"
+        post "friend"
+      end
+    end
 
     resources :reserves, except: [:update, :destroy, :edit] do
       collection do

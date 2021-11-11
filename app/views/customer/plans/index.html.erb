@@ -1,4 +1,4 @@
-<div class="mt-3">
+<div class="slider-box">
   <div class="bxslider">
     <div class="slider"><img class="slider-image" src="assets/image1.jpg"></div>
     <div class="slider"><img class="slider-image" src="assets/image10.jpg"></div>
@@ -11,11 +11,14 @@
     <div class="slider"><img class="slider-image" src="assets/image8.jpg"></div>
     <div class="slider"><img class="slider-image" src="assets/image4.jpg"></div>
   </div>
+  <div class="slider-text">
+    <p>『今』を、<br> 　　　写真に</p>
+  </div>
 </div>
 <div class="container mt-5 mb-t5">
   <h5>撮りたいシーンを選んでください</h5>
   <div class="row">
-    <div class="plans">
+    <div class="col-md3 plans">
       <%= link_to root_path, class: 'plan-icon' do %>
         <%= image_tag '結婚式.png', size: "250x250", class:'icon' %>
       <% end %>
