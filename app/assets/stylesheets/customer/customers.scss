@@ -2,7 +2,24 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.signup-page, .login-page {
+.signup-page, .login-page, .mypage {
   display: block!important;
-  padding-left: 400px;
+}
+
+.customer_info {
+  height: 300px;
+  width: 300px;
+}
+
+.update {
+  height: 80px;
+  width: 300px;
+}
+
+.mypage-item {
+  width: auto;
+}
+
+.update-info {
+  height: 400px;
 }
