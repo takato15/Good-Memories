@@ -29,14 +29,15 @@ Rails.application.routes.draw do
 
     resources :plans, only: [:index, :show, :create] do
       collection do
-        post "bridal"
-        post "seizinnshiki"
-        post "maternity"
-        post "child"
-        post "trip"
-        post "couple"
-        post "shichigosan"
-        post "friend"
+        get "flow"
+        get "bridal"
+        get "seizinshiki"
+        get "maternity"
+        get "child"
+        get "trip"
+        get "couple"
+        get "shichigosan"
+        get "friend"
       end
     end
 
