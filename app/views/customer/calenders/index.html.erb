@@ -1,0 +1,11 @@
+<h1>撮影可能スケジュール</h1>
+
+<%= month_calendar events: @calenders do |date, calenders| %>
+  <%= date.day %>
+
+  <% calenders.each do |calender| %>
+    <div>
+      <%= calender.title %>
+    </div>
+  <% end %>
+<% end %>
