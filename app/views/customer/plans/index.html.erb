@@ -24,6 +24,18 @@
       友達や恋人との休日、七五三、結婚式や成人式の前撮りなど、様々なシーンを撮影致します。
     </p>
   </div>
+  
+  <div class="calender">
+    <%= button_to calenders_path, :class => 'ui button', method: :get do %>
+      <i class="far fa-calendar-alt"></i> 撮影可能スケジュール
+    <% end %>
+  </div>
+  <br>
+  <div class="flow">
+    <%= button_to flow_plans_path, :class => 'ui button', method: :get do %>
+      <i class="far fa-paper-plane"></i> 予約の流れ
+    <% end %>
+  </div>
 
 </div>
 <div class="container mt-5 mb-5">
