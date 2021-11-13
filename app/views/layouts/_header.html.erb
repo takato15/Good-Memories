@@ -1,3 +1,4 @@
+<!--<div class="fixed-top">-->
 <nav class="navbar navbar-expand-lg " id="navbarHeader">
 
   <div class="container">
@@ -63,8 +64,18 @@
               <% end %>
             </li>
             <li class="nav-item">
+              <%= link_to reserves_path, class: 'nav-link text-light  ml-2' do %>
+                注文履歴
+              <% end %>
+            </li>
+            <li class="nav-item">
               <%= link_to destroy_customer_session_path, class: 'nav-link text-light  ml-2', method: :delete do %>
                 ログアウト
+              <% end %>
+            </li>
+            <li class="nav-item reservesbtn">
+              <%= button_to new_reserf_path, class: 'reservesbtn nav-link text-light  ml-2', method: :get do %>
+                予約
               <% end %>
             </li>
           <% else %>
@@ -100,3 +111,4 @@
     </div>
 
   </nav>
+  <!--</div>-->
