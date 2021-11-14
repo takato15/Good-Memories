@@ -1,15 +1,12 @@
 <div class="container my-5" style="height: 650px;">
 
-  <div class="row">
-    <div class="offset-1 text-center">
       <h3 class="text title-text">
         注文履歴一覧
       </h3>
-    </div>
-  </div>
+
 
 <% if @reserves.exists? %>
-  <div class="row mt-5">
+  <div class="col mt-5">
     <table class="table table-bordered table-hover">
 
       <thead class="table-active text">
@@ -24,11 +21,6 @@
         <% @reserves.each do |reserve| %>
         <tr class="light-text">
           <td><%= reserve.created_at.strftime('%Y年%m月%d日') %></td>
-          <td>
-              〒<%= reserve.post_cord %><br>
-              <%= reserve.address %><br>
-              <%= reserve.name %> 様
-          </td>
           <td>
             <%= link_to "詳細", reserf_path(reserve.id), class: "btn", style: "background-color: #cbb05e; color: black;" %>
           </td>
