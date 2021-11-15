@@ -17,7 +17,9 @@
               <th>氏名</th>
               <td>
                 <%= current_customer.last_name %>
-                <%= current_customer.first_name %></td>
+                <%= f.hidden_field :last_name, default: current_customer.last_name %>
+                <%= current_customer.first_name %>
+              </td>
             </tr>
             <tr>
               <th>フリガナ</th>
@@ -44,6 +46,16 @@
             <tr>
               <th>希望プラン</th>
               <td><%= f.select :pran_name, [["結婚式関係", 1], ["成人式関係", 2], ["マタニティ", 3], ["お子さま", 4], ["旅行", 5], ["カップル", 6], ["七五三", 7], ["友達", 8]], :prompt => "選択してください" %></td>
+            </tr>
+            <tr>
+              <th>撮影人数</th>
+              <td><%= f.select :count, [[1,1],[2,2],[3,3],[4,4],[5,5],[6,6],[7,7],[8,8],[9,9],[10,10]], :prompt => "人数を選択してください" %>　※例) お友達2人と撮影希望⇨２人</td>
+            </tr>
+            <tr>
+              <th>撮影希望日</th>
+              <td>
+                <%= f.date_field :reserve_day %>
+              </td>
             </tr>
 
              <%= f.submit '予約依頼',class:"btn", style: "background-color: #cbb05e; color: black;" %>
