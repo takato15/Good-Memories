@@ -1,0 +1,21 @@
+<div class="row md-5 mt-5">
+    <!-- ofsetは左右の余白 -->
+    <table class="table col-md-4">
+      <thead>
+        <tr>
+          <th>ジャンル</th>
+          <th colspan="1"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @contacts.each do |contact| %>
+          <tr>
+            <td><%= contact.title %></td>
+            <td><%= contact.detail %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+  </div>
