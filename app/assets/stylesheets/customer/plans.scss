@@ -44,7 +44,7 @@ h3 {
   justify-content: space-around;
 }
 
-.overview, .bridal-show {
+.overview, .plan-show {
  display: block;
 }
 
@@ -64,8 +64,25 @@ button {
   background-color: #D1DADA;
 }
 
-.bridal-icon, .seizinshiki-icon {
+.icon,
+.plan-icon {
   border-radius: 20px;
   margin: 15px;
   padding: 10px;
+}
+
+.plans-image,
+.plan-image {
+  overflow: hidden; //これを記述することではみ出た部分を非表示にします。
+}
+
+.plans-image img,
+.plan-image img, {
+  transition: 1s all;
+}
+
+.plans-image img:hover,
+.plan-image img:hover {
+  transform: scale(1.2,1.2);
+  transition: 1s all;
 }
