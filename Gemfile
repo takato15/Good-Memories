@@ -77,3 +77,8 @@ gem 'devise-i18n'
 gem 'simple_calendar','~> 2.0'
 gem 'momentjs-rails'
 gem 'jquery-rails'
+
+gem 'dotenv-rails'
+group :production do
+  gem 'mysql2'
+end
