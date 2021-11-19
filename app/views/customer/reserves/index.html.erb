@@ -1,7 +1,7 @@
 <div class="container my-5" style="height: 650px;">
 
       <h3 class="text title-text">
-        注文履歴一覧
+        予約履歴一覧
       </h3>
 
 
@@ -11,19 +11,20 @@
 
       <thead class="table-active text">
         <tr>
-          <th>注文日</th>
-          
-          <th>注文詳細</th>
+          <th>予約受付日</th>
+          <th>撮影希望日</th>
+          <th>撮影シーン</th>
+          <th>撮影人数</th>
         </tr>
       </thead>
 
       <tbody>
         <% @reserves.each do |reserve| %>
         <tr class="light-text">
-          <td><%= reserve.created_at.strftime('%Y年%m月%d日') %></td>
-          <td>
-            <%= link_to "詳細", reserf_path(reserve.id), class: "btn", style: "background-color: #cbb05e; color: black;" %>
-          </td>
+          <td><%= reserve.created_at.strftime('%Y年%m月%d日 %H時%M分') %></td>
+          <td><%= reserve.reserve_day.strftime('%Y年%m月%d日') %></td>
+          <td><%= reserve.plan_name_i18n %></td>
+          <td><%= reserve.count %></td>
         </tr>
         <% end %>
       </tbody>

@@ -12,12 +12,11 @@
       </div>
 
       <table class="reserve">
-          <%= form_with model:@reserve, url: reserves_path, local:true do |f| %>
+          <%= form_with model: @reserve, url: reserves_path, local:true do |f| %>
             <tr>
               <th>氏名</th>
               <td>
                 <%= current_customer.last_name %>
-                <%= f.hidden_field :last_name, default: current_customer.last_name %>
                 <%= current_customer.first_name %>
               </td>
             </tr>
@@ -45,7 +44,7 @@
             </tr>
             <tr>
               <th>希望プラン</th>
-              <td><%= f.select :pran_name, [["結婚式関係", 1], ["成人式関係", 2], ["マタニティ", 3], ["お子さま", 4], ["旅行", 5], ["カップル", 6], ["七五三", 7], ["友達", 8]], :prompt => "選択してください" %></td>
+              <td><%= f.select :plan_name, Reserve.plan_names.keys.map {|k| [I18n.t("enums.reserve.plan_name.#{k}"), k]}, :prompt => "選択してください" %></td>
             </tr>
             <tr>
               <th>撮影人数</th>
@@ -58,8 +57,10 @@
               </td>
             </tr>
 
-             <%= f.submit '予約依頼',class:"btn", style: "background-color: #cbb05e; color: black;" %>
-             <% end %>
+              <%= f.hidden_field :customer_id, value: current_customer.id %>
+
+              <%= f.submit '予約依頼',class:"btn", style: "background-color: #cbb05e; color: black;" %>
+            <% end %>
           </table>
 
     </div>
