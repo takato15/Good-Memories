@@ -79,11 +79,7 @@ ActiveRecord::Schema.define(version: 2021_11_08_054812) do
     t.integer "plan_id"
     t.integer "count"
     t.datetime "reserve_day"
-    t.integer "billing"
-    t.integer "payment"
-    t.string "name"
-    t.string "post_cord"
-    t.string "address"
+    t.integer "plan_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

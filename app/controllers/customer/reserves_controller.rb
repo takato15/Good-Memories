@@ -1,11 +1,16 @@
 class Customer::ReservesController < ApplicationController
 
   def index
-    @reserves = Reserve.all
+    @reserves = Reserve.where(customer_id: current_customer.id).page(params[:page]).per(10)
   end
 
   def new
     @reserve = Reserve.new
+  end
+
+  def confirm
+    @reserve = Reserve.new(reserve_params)
+    @reserve.customer_id = current_customer.id
   end
 
   def create
@@ -21,7 +26,7 @@ class Customer::ReservesController < ApplicationController
   private
 
   def reserve_params
-    params.require(:reserve).permit(:count, :reserve_day, :billing, :payment, :name, :post_cord, :address, :plan_name )
+    params.require(:reserve).permit(:customer_id, :count, :reserve_day, :plan_name )
   end
 
 end
