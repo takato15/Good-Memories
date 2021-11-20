@@ -2,6 +2,7 @@ class Customer::ContactsController < ApplicationController
 
   def index
     @contacts = Contact.all
+    @contact = Contact.new
   end
 
   def new
@@ -10,9 +11,8 @@ class Customer::ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(contact_params)
-
     if @contact.save
-      redirect_to contacts_path
+      redirect_to root_path
     else
       @contacts = Contact.all
       render :new
@@ -23,7 +23,7 @@ class Customer::ContactsController < ApplicationController
   private
 
   def contact_params
-    params.require(:contact).permit(:title, :detail, :reply)
+    params.require(:contact).permit(:customer_id, :title, :detail, :reply)
   end
 
 end

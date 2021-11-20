@@ -27,18 +27,13 @@
               <% end %>
             </li>
             <li class="nav-item">
-              <%= link_to root_path, class: 'nav-link text-light  ml-2' do %>
-                注文履歴一覧
-              <% end %>
-            </li>
-            <li class="nav-item">
-              <%= link_to root_path, class: 'nav-link text-light  ml-2' do %>
-                ジャンル一覧
+              <%= link_to admin_reserves_path, class: 'nav-link text-light  ml-2' do %>
+                予約履歴一覧
               <% end %>
             </li>
             <li class="nav-item">
               <%= link_to admin_contacts_path, class: 'nav-link text-light  ml-2' do %>
-                問い合わせ
+                問い合わせ一覧
               <% end %>
             </li>
             <li class="nav-item">
@@ -74,7 +69,7 @@
               <% end %>
             </li>
             <li class="nav-item">
-              <%= link_to new_contact_path, class: 'nav-link text-light  ml-2' do %>
+              <%= link_to contacts_path, class: 'nav-link text-light  ml-2' do %>
                 問い合わせ
               <% end %>
             </li>

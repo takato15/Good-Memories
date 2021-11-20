@@ -1,25 +1,30 @@
-<h2>問い合わせ一覧</h2>
-    <table>
-        <thead>
+<div class="container mb-5 contact">
+  <div class="col md-5 mt-5">
+    <h2 class="contact-title">お問い合わせ一覧</h2>
+    <table class="table col">
+      <thead>
         <tr>
-            <th>ユーザー名</th>
-        <th>問い合わせタイトル</th>
-        <th>受信日</th>
-        <th></th>
-        <th></th>
+          <th>タイトル</th>
+          <th>受信日</th>
+          <th>問い合わせ内容</th>
         </tr>
-    </thead>
-    <tbody>
-        <!--< % @customers.each do |customer| %>-->
-            <% @contacts.each do |contact| %>
-              <tr>
-                  <td><%= customer.last_name %></td>
-                  <td><%= contact.title %></td>
-                  <td><%= contact.created_at.strftime("%Y年%m月%d日 ") %></td>
-                  <td><%= link_to "返信", edit_admins_contact_path(contact) %></td>
-                  <td><%= link_to "削除", admins_contact_path(contact), method: :delete %></td>
-               </tr>
-            <% end %>
-       <!--< % end %>-->
-        </tbody>
-</table>
+      </thead>
+
+      <tbody>
+        <% @contacts.each do |contact| %>
+          <tr>
+            <td><%= contact.title %></td>
+            <td><%= contact.created_at.strftime('%Y年%m月%d日 %H時%M分') %></td>
+            <td>
+              <details>
+                <summary>詳細を開く</summary>
+                <p><%= contact.detail %></p>
+              </details>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+  </div>
+  </div>

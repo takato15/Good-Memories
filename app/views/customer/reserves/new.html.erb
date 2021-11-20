@@ -1,4 +1,4 @@
-<div class="container mt-5 mb-5">
+<div class="container mt-5 mb-5 reserve-new">
     <h2>Reserves</h2>
 
     <div class="reserve-new">
@@ -10,59 +10,65 @@
           <% end %>
         <% end %>
       </div>
-
-      <table class="reserve">
-          <%= form_with model: @reserve, url: reserves_path, local:true do |f| %>
-            <tr>
-              <th>氏名</th>
-              <td>
-                <%= current_customer.last_name %>
-                <%= current_customer.first_name %>
-              </td>
-            </tr>
-            <tr>
-              <th>フリガナ</th>
-              <td>
-                <%= current_customer.last_name_kana %>
-                <%= current_customer.first_name_kana %></td>
-            </tr>
-            <tr>
-              <th>郵便番号</th>
-              <td><%= current_customer.post_cord %></td>
-            </tr>
-            <tr>
-              <th>住所</th>
-              <td><%= current_customer.address %></td>
-            </tr>
-            <tr>
-              <th>電話番号</th>
-              <td><%= current_customer.phone_number %></td>
-            </tr>
-            <tr>
-              <th>メールアドレス</th>
-              <td><%= current_customer.email %></td>
-            </tr>
-            <tr>
-              <th>希望プラン</th>
-              <td><%= f.select :plan_name, Reserve.plan_names.keys.map {|k| [I18n.t("enums.reserve.plan_name.#{k}"), k]}, :prompt => "選択してください" %></td>
-            </tr>
-            <tr>
-              <th>撮影人数</th>
-              <td><%= f.select :count, [[1,1],[2,2],[3,3],[4,4],[5,5],[6,6],[7,7],[8,8],[9,9],[10,10]], :prompt => "人数を選択してください" %>　※例) お友達2人と撮影希望⇨２人</td>
-            </tr>
-            <tr>
-              <th>撮影希望日</th>
-              <td>
-                <%= f.date_field :reserve_day %>
-              </td>
-            </tr>
-
-              <%= f.hidden_field :customer_id, value: current_customer.id %>
-
-              <%= f.submit '予約依頼',class:"btn", style: "background-color: #cbb05e; color: black;" %>
-            <% end %>
-          </table>
-
+      
+      <%= form_with model: @reserve, url: confirm_reserves_path, local:true do |f| %>
+        <table class="reserve">
+          <tr>
+            <th>氏名</th>
+            <td>
+              <%= current_customer.last_name %>
+              <%= current_customer.first_name %>
+            </td>
+          </tr>
+          <tr>
+            <th>フリガナ</th>
+            <td>
+              <%= current_customer.last_name_kana %>
+              <%= current_customer.first_name_kana %></td>
+          </tr>
+          <tr>
+            <th>郵便番号</th>
+            <td><%= current_customer.post_cord %></td>
+          </tr>
+          <tr>
+            <th>住所</th>
+            <td><%= current_customer.address %></td>
+          </tr>
+          <tr>
+            <th>電話番号</th>
+            <td><%= current_customer.phone_number %></td>
+          </tr>
+          <tr>
+            <th>メールアドレス</th>
+            <td><%= current_customer.email %></td>
+          </tr>
+          <tr>
+            <th>希望プラン</th>
+            <td><%= f.select :plan_name, Reserve.plan_names.keys.map {|k| [I18n.t("enums.reserve.plan_name.#{k}"), k]}, :prompt => "選択してください" %></td>
+          </tr>
+          <tr>
+            <th>撮影人数</th>
+            <td><%= f.select :count, [[1,1],[2,2],[3,3],[4,4],[5,5],[6,6],[7,7],[8,8],[9,9],[10,10]], :prompt => "人数を選択してください" %>　※例) お友達2人と撮影希望⇨２人</td>
+          </tr>
+          <tr>
+            <th>撮影希望日</th>
+            <td><%= f.date_field :reserve_day %></td>
+          </tr>
+          <tr>
+            <th>金額</th>
+            <td><%= @reserve_price %> 円</td>
+          </tr>
+          <tr>
+            <th><%= f.hidden_field :customer_id, value: current_customer.id %></th>
+            <td><%= f.submit '確認画面に進む',class: "btn btn-sm btn-dark mt-3" %></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td>※まだ確定ではありません</td>
+          </tr>
+        </table>
+      <% end %>
+         
     </div>
 
 </div>

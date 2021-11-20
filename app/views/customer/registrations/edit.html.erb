@@ -10,24 +10,28 @@
       <h3>会員情報編集</h3>
 
 
-<%= form_with model:@customer, url: customers_path, local:true do |f| %>
+<%= form_with model: @customer, url: customers_path, local:true do |f| %>
         <table class="update-info">
 
             <tr>
               <th>会員ID</th>
-              <td><%= @customer.id %></td>
+              <td>
+                <%= @customer.id %>
+              </td>
             </tr>
             <tr>
               <th>氏名</th>
               <td>
                 <%= f.text_field :last_name %>
-                <%= f.text_field :first_name %></td>
+                <%= f.text_field :first_name %>
+              </td>
             </tr>
             <tr>
               <th>フリガナ</th>
               <td>
                 <%= f.text_field :last_name_kana %>
-                <%= f.text_field :first_name_kana %></td>
+                <%= f.text_field :first_name_kana %>
+              </td>
             </tr>
             <tr>
               <th>郵便番号</th>
