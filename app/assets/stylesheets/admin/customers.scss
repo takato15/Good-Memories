@@ -1,3 +1,23 @@
 // Place all the styles related to the admin/customers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.customers,
+.customer-show,
+.customer-edit {
+  display: block!important;
+}
+
+.admin_customer_info,
+.admin_customer_edit {
+  height: 400px;
+}
+
+.admin_customer_info td,
+.admin_customer_edit td{
+  padding-left: 10px;
+}
+
+label {
+  margin-bottom: 0px!important;
+}
