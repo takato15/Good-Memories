@@ -1,8 +1,8 @@
 class Admin::ContactsController < ApplicationController
-  
+
   def index
     @contacts = Contact.all
-    @customers = Customer.all
+    # @customer = Customer.find(customer_id)
   end
 
   def edit
@@ -26,9 +26,9 @@ class Admin::ContactsController < ApplicationController
   end
 
   private
-  
+
   def contact_params
-    params.require(:contact).permit(:title, :detail, :reply)
+    params.require(:contact).permit(:customer_id, :title, :detail, :reply)
   end
-  
+
 end
