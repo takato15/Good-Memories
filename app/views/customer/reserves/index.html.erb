@@ -1,0 +1,42 @@
+<div class="container my-5">
+
+      <h3 class="text title-text">
+        予約履歴一覧
+      </h3>
+
+
+<% if @reserves.exists? %>
+  <div class="col mt-5">
+    <table class="table table-bordered table-hover">
+
+      <thead class="table-active text">
+        <tr>
+          <th>予約受付日</th>
+          <th>撮影希望日</th>
+          <th>撮影シーン</th>
+          <th>撮影人数</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @reserves.each do |reserve| %>
+        <tr class="light-text">
+          <td><%= reserve.created_at.strftime('%Y年%m月%d日 %H時%M分') %></td>
+          <td><%= reserve.reserve_day.strftime('%Y年%m月%d日') %></td>
+          <td><%= reserve.plan_name_i18n %></td>
+          <td><%= reserve.count %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <!--<div class="pagination">< %= paginate @reserves %></div>-->
+  </div>
+
+
+
+  <% else %>
+      <div class="text-center">
+        <h2>※注文履歴がありません</h2>
+      </div>
+  <% end %>
+</div>

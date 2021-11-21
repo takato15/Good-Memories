@@ -1,0 +1,73 @@
+<div class="slider-box">
+  <div class="bxslider">
+    <div class="slider"><img class="slider-image" src="<%= asset_path('image1.jpg')%>"></div>
+    <div class="slider"><img class="slider-image" src="<%= asset_path('image10.jpg')%>"></div>
+    <div class="slider"><img class="slider-image" src="<%= asset_path('image2.jpg')%>"></div>
+    <div class="slider"><img class="slider-image" src="<%= asset_path('image3.jpg')%>"></div>
+    <div class="slider"><img class="slider-image" src="<%= asset_path('image9.jpg')%>"></div>
+    <div class="slider"><img class="slider-image" src="<%= asset_path('image5.jpg')%>"></div>
+    <div class="slider"><img class="slider-image" src="<%= asset_path('image6.jpg')%>"></div>
+    <div class="slider"><img class="slider-image" src="<%= asset_path('image7.jpg')%>"></div>
+    <div class="slider"><img class="slider-image" src="<%= asset_path('image8.jpg')%>"></div>
+    <div class="slider"><img class="slider-image" src="<%= asset_path('image4.jpg')%>"></div>
+  </div>
+  <div class="slider-text">
+    <p>『今』を、<br> 　　　写真に</p>
+  </div>
+</div>
+
+<div class="container mt-5 overview">
+  <h3>Good Memoriesとは？</h3>
+  <div class="row mt-3">
+    <p class="col">
+      Good Memoriesは些細な日常を -良い思い出- にする「出張撮影サービス」です。<br>
+      友達や恋人との休日、七五三、結婚式や成人式の前撮りなど、様々なシーンを撮影致します。
+    </p>
+  </div>
+
+  <div class="calender">
+    <%= button_to calenders_path, :class => 'ui button', method: :get do %>
+      <i class="far fa-calendar-alt"></i> 撮影可能スケジュール
+    <% end %>
+  </div>
+  <br>
+  <div class="flow">
+    <%= button_to flow_plans_path, :class => 'ui button', method: :get do %>
+      <i class="far fa-paper-plane"></i> 予約の流れ
+    <% end %>
+  </div>
+
+</div>
+<div class="container mt-5 mb-5">
+  <h3>撮りたいシーンを選んでください</h3>
+  <div class="row">
+    <div class="col-md3 plans-image">
+      <%= link_to bridal_plans_path, class: 'plans-icon' do %>
+        <%= image_tag '結婚式.png', size: "250x250", class:'icon' %>
+      <% end %>
+      <%= link_to seizinshiki_plans_path, class: 'plans-icon' do %>
+        <%= image_tag '成人式.png', size: "250x250", class:'icon' %>
+      <% end %>
+      <%= link_to maternity_plans_path, class: 'plans-icon' do %>
+        <%= image_tag 'マタニティ.png', size: "250x250", class:'icon' %>
+      <% end %>
+      <%= link_to child_plans_path, class: 'plans-icon' do %>
+        <%= image_tag 'お子さま.png', size: "250x250", class:'icon' %>
+      <% end %>
+      <%= link_to trip_plans_path, class: 'plans-icon' do %>
+        <%= image_tag '旅行.png', size: "250x250", class:'icon' %>
+      <% end %>
+      <%= link_to couple_plans_path, class: 'plans-icon' do %>
+        <%= image_tag 'カップル.png', size: "250x250", class:'icon' %>
+      <% end %>
+      <%= link_to shichigosan_plans_path, class: 'plans-icon' do %>
+        <%= image_tag '七五三.png', size: "250x250", class:'icon' %>
+      <% end %>
+      <%= link_to friend_plans_path, class: 'plans-icon' do %>
+        <%= image_tag '友達.png', size: "250x250", class:'icon' %>
+      <% end %>
+    </div>
+
+
+    </div>
+  </div>

@@ -1,0 +1,45 @@
+<%= flash[:notice] %>
+
+<div class="container mt-5 " style="margin-bottom: 150px;">
+  <div class="row">
+    <div class="col-md-12">
+        <div class="mypage",style="text-align:center">
+        <h3 class="title">マイページ</h3>
+
+      <table class="update">
+        <tr><th><h5><strong>登録情報</strong></h5></th>
+          <td><%= link_to "編集する", edit_customers_path, class: "btn btn-sm btn-dark" %></td>
+        </tr>
+      </table>
+
+      <table class="table table-bordered customer_info">
+        <tr>
+          <th>氏名</th>
+          <td class="mypage-item"><%= @customer.last_name %>　<%= @customer.first_name %></td>
+        </tr>
+        <tr>
+          <th>カナ</th>
+          <td class="mypage-item"><%= @customer.last_name_kana %>　<%= @customer.first_name_kana %></td>
+        </tr>
+        <tr>
+          <th>郵便番号</th>
+          <td class="mypage-item"><%= @customer.post_cord %></td>
+        </tr>
+        <tr>
+          <th>住所</th>
+          <td class="mypage-item"><%= @customer.address %></td>
+        </tr>
+        <tr>
+          <th>電話番号</th>
+          <td class="mypage-item"><%= @customer.phone_number %></td>
+        </tr>
+        <tr>
+          <th>メールアドレス</th>
+          <td class="mypage-item"><%= @customer.email %></td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+</div>
+</div>

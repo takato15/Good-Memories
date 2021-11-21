@@ -10,6 +10,46 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require simple_calendar
  *= require_tree .
  *= require_self
  */
+ @import "bootstrap";
+ @import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=M+PLUS+Rounded+1c:wght@100&display=swap');
+
+
+ header {
+  background-color: #e6f0f0;
+  color: #888888;
+ }
+
+ .navbar {
+  background-color: #e6f0f0;
+ }
+
+ footer {
+  height: 100px;
+  font-family: 'Noto Sans JP',serif;
+  background-color: #e6f0f0;
+	 background-size: cover;
+	 background-position: center;
+  width: 100%;
+ }
+
+ .footer-text {
+  color: #888888;
+ }
+
+ .text-light {
+  color: #888888!important;
+ }
+
+ main {
+  font-family: 'Kiwi Maru', serif; /*google_font*/
+ }
+
+ .reservesbtn {
+  width: 80px!important;
+  height: 40px;
+  border-radius: 30px;
+ }

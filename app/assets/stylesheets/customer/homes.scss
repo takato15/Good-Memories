@@ -1,3 +1,22 @@
 // Place all the styles related to the customer/homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.about-page{
+  padding-top: 50px;
+  padding-left: 100px;
+  height: 600px;
+  witdh: auto;
+  font-size: 25px;
+  font-family: 'Noto Sans JP',serif;
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+  letter-spacing: 0.4rem;
+  background-image: image-url("about.jpg");
+  background-size:cover;
+  background-position:center;
+ }
+
+// footer {
+  // position: absolute;/*←絶対位置*/
+  // bottom: 0; /*下に固定*/
+// }

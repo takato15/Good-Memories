@@ -1,0 +1,40 @@
+<div class="container mt-5 mb-5 reserve-confirm">
+
+
+      <h2>依頼情報確認</h2>
+
+      <div class="row mt-3">
+        <div class="col-8">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>撮影希望日</th>
+                <th>撮影シーン</th>
+                <th>撮影人数</th>
+                <th>金額</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><%= @reserve.reserve_day.strftime('%Y年%m月%d日') %></td>
+                <td><%= @reserve.plan_name_i18n %></td>
+                <td><%= @reserve.count %></td>
+                <td><%= @reserve_price %> 円</td>
+              </tr>
+            </tbody>
+          </table>
+        
+
+        <%= form_with model: @reserve, url: reserves_path, method: :post, local: true do |f| %>
+          <%= f.hidden_field :customer_id, value: current_customer.id %>
+          <%= f.hidden_field :reserve_day, value: @reserve.reserve_day %>
+          <%= f.hidden_field :plan_name, value: @reserve.plan_name %>
+          <%= f.hidden_field :count, value: @reserve.count %>
+          <div class="text-center mt-5">
+            <%= f.submit "依頼を確定する", class: "btn btn-sm btn-dark" %>
+          </div>
+        <% end %>
+</div>
+      </div>
+
+</div>

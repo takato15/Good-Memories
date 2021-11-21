@@ -1,0 +1,12 @@
+ja:
+  enums:
+    reserve:
+      plan_name:
+        bridal: "結婚式"
+        seizinshiki: "成人式"
+        maternity: "マタニティ"
+        child: "お子さま"
+        trip: "旅行"
+        couple: "カップル"
+        shichigosan: "七五三"
+        friend: "友達"
