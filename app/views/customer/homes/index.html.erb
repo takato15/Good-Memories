@@ -1,17 +1,17 @@
-<h1>photographs</h1>
+<h2>photographs</h2>
 
 <div class="col-md-10">
-      <h2><%= "写真一覧 （全#{@images_all.count}件）" %></h2>
+      <h2><%= "写真一覧 （全#{@photos_all.count}件）" %></h2>
 
         <div class="image-box">
-            <% @images.each do |image| %>
+            <% @photos.each do |photo| %>
                 <div class="col-lg-3 col-md-3 mb-3">
-                        <%= attachment_image_tag(image, :image, class: 'index-image', fallback: "no_image.jpg") %><br>
+                        <%= attachment_image_tag(photo, :image, class: 'index-image', fallback: "no_image.jpg") %><br>
                     <% end %>
                 </div>
             <% end %>
         </div>
 
-        <%= paginate @images %>
+        <%= paginate @photos %>
 
     </div>
