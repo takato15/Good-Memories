@@ -1,3 +1,14 @@
 // Place all the styles related to the customer/calenders controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.calender {
+  display: block!important;
+}
+
+.wday-0 {
+  color: red;
+}
+.wday-6 {
+   color: blue;
+}
