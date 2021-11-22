@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2021_11_08_054812) do
 
   create_table "calenders", force: :cascade do |t|
     t.boolean "title", default: false
+    t.datetime "start_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
