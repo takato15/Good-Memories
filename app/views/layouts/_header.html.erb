@@ -16,6 +16,7 @@
         <ul class="navbar-nav ml-auto">
 
           <% if admin_signed_in? %>
+            <span class="text-center mt-2" style="color: black;">管理者用ページ</span>
             <li class="nav-item">
               <%= link_to admin_homes_path, class: 'nav-link text-light  ml-2' do %>
                 写真一覧
