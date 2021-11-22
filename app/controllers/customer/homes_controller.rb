@@ -1,15 +1,14 @@
 class Customer::HomesController < ApplicationController
     
     def index
-        @images = Image.all.order(created_at: :desc).page(params[:page]).per(10)
-        @images_all = Image.all
+        @photos = Photo.all.order(created_at: :desc).page(params[:page]).per(10)
+        @photos_all = Photo.all
     end
     
     private
 
-
-    def image_params
-        params.require(:image).permit(:tag_id)
+    def photo_params
+        params.require(:photo).permit(:image, :tag_id)
     end
 
 end
