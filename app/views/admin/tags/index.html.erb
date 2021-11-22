@@ -27,6 +27,7 @@
         <tr>
           <th>タグ</th>
           <th colspan="1"></th>
+          <th colspan="1"></th>
         </tr>
       </thead>
 
@@ -35,6 +36,7 @@
           <tr>
             <td><%= tag.name %></td>
             <td><%= link_to "編集する", edit_admin_tag_path(tag.id), class:"btn btn-sm btn-secondary" %></td>
+            <td><%= link_to '削除する', admin_tag_path(tag.id), method: :delete, data: { confirm: '本当に消しますか？' }, class: "btn btn-sm btn-danger admin_home_#{tag.id}"%></td>
           </tr>
         <% end %>
       </tbody>

@@ -1,0 +1,36 @@
+<div class="container mt-5 mb-5 edit-photo">
+    <h2>写真情報編集</h2>
+
+    <div class="photo-edit">
+        <div class="validates">
+          <% if @photo.errors.any? %>
+              <%= @photo.errors.count %> 件の入力ミスがあります。
+              <% @photo.errors.full_messages.each do |message| %><br>
+                  ・<%= message %>
+              <% end %>
+          <% end %>
+        </div>
+
+        <%= form_with model: @photo, url: admin_home_path, local:true do |f| %>
+            <dl>
+
+                <div class="edit-form-group">
+                  <dt>投稿画像</dt>
+                  <dd><%= f.attachment_field :image %></dd>
+                </div>
+                <div class="edit-form-group">
+                  <dt>タグ</dt>
+                  <dd><%= f.collection_select :tag_id, Tag.all, :id, :name %></dd>
+                </div>
+            </dl>
+
+            <div class="form-success">
+              <%= f.submit "変更を保存", class:"btn btn-sl btn-dark" %>
+            </div>
+
+          <% end %>
+
+          <%= link_to 'Destroy', admin_home_path(@photo.id), method: :delete, data: { confirm: '本当に消しますか？' }, class: "btn btn-sm btn-danger admin_home_#{@photo.id} mt-5"%>
+
+    </div>
+</div>
