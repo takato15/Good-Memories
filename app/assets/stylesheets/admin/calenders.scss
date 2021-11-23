@@ -1,3 +1,17 @@
 // Place all the styles related to the admin/calenders controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.new-carender {
+  display: block!important;
+}
+
+.create-schedule,
+.plus {
+  height: 47px!important;
+}
+
+.material-icons {
+  &.md-24 { font-size: 24px; }
+  vertical-align: middle;
+}

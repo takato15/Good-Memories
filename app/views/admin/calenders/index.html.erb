@@ -1,13 +1,25 @@
+<div class="flash">
+	<%= flash[:notice] %>
+</div>
+
 <div class="container mt-5 mb-5 calender">
   <h2 class="mb-5">撮影可能スケジュール管理</h2>
-  
+
+  <div class="create-schedule text-right">
+    <%= link_to new_admin_calender_path, class: "btn btn-dark plus" do %>
+      <span class="material-icons md-24">add_box</span>
+    <% end %>
+  </div>
+
   <%= month_calendar events: @calenders do |date, calenders| %>
     <%= date.day %>
-  
+
     <% calenders.each do |calender| %>
-      <div>
-        <%= calender.title %>
-      </div>
+      <% if calender.title == true %>
+        <%= link_to edit_admin_calender_path(calender), class: 'nav-link text-light  ml-2' do %>
+  			  <p class="OK text-center"><strong>撮影可</strong></p>
+			  <% end %>
+			<% end %>
     <% end %>
   <% end %>
 </div>
