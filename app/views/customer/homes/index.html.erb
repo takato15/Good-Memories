@@ -6,7 +6,7 @@
         <div class="image-box">
             <% @photos.each do |photo| %>
                 <div class="col-lg-3 col-md-3 mb-3">
-                        <%= attachment_image_tag(photo, :image, class: 'index-image', fallback: "no_image.jpg") %><br>
+                        <%= attachment_image_tag(photo, :image, class: 'index-image') %><br>
                     <% end %>
                 </div>
             <% end %>

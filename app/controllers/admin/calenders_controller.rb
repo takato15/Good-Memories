@@ -13,6 +13,8 @@ class Admin::CalendersController < ApplicationController
     @calender = Calender.new(calender_params)
     if @calender.save
       redirect_to admin_calenders_path, notice: "スケジュールを追加しました。"
+    else
+      render "new"
     end
   end
 
@@ -25,7 +27,7 @@ class Admin::CalendersController < ApplicationController
     if @calender.update(calender_params)
       redirect_to admin_calenders_path, notice: "スケジュールを編集しました"
     else
-      render 'edit'
+      render "edit"
     end
   end
 

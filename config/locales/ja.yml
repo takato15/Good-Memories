@@ -61,10 +61,11 @@ ja:
       - 11月
       - 12月
 
-  time:
-    am: 午前
-    formats:
-      default: "%Y年%m月%d日(%a) %H時%M分%S秒 %z"
-      long: "%Y/%m/%d %H:%M"
-      short: "%m/%d %H:%M"
-    pm: 午後
+  activerecord:
+      errors:
+        messages:
+          blank: "が入力されていません。"
+
+      attributes:
+        calender:
+          start_time: "スケジュール変更日"
