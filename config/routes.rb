@@ -69,7 +69,7 @@ Rails.application.routes.draw do
     resources :customers, except: [:new, :create, :destroy]
     resources :reserves, only: [:index, :show]
     resources :contacts, except: [:show, :new, :destroy]
-    resources :calenders, only: [:index, :new, :create]
+    resources :calenders, except: [:show, :destroy]
 
   end
 

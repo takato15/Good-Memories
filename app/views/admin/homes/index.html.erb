@@ -15,7 +15,7 @@
           <% @photos.each do |photo| %>
             <div class="col-lg-3 col-md-3 mb-3">
               <%= link_to admin_home_path(photo.id), style: "color: black;", data: {"turbolinks" => false} do %>
-                <%= attachment_image_tag(photo, :image, class: 'index-image', fallback: "no_image.jpg") %><br>
+                <%= attachment_image_tag(photo, :image, class: "index-image") %><br>
               <% end %>
             </div>
           <% end %>
