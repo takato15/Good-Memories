@@ -69,3 +69,8 @@ ja:
       attributes:
         calender:
           start_time: "スケジュール変更日"
+          
+        review:
+          title: "タイトル"
+          evaluation: "評価"
+          contents: "内容"

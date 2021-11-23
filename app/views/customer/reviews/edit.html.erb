@@ -1,0 +1,42 @@
+<div class="container mt-5 mb-5 edit-review">
+
+  <h2>口コミ編集</h2>
+
+  <% if @review.errors.any? %>
+    <%= @review.errors.count %>件のエラー<br>
+    <% @review.errors.full_messages.each do |message| %>
+      ・<%= message %><br>
+    <% end %>
+  <% end %>
+
+  <%= form_with model: @review, local: true do |f| %>
+    <div class="review-form mt-3 mb-3">
+      <%= f.label :タイトル %><br>
+      <%= f.text_field :title %>
+    </div>
+
+    <div id="evaluate_stars">
+      <label>評価</label><br>
+    </div>
+
+    <div class="review-form mt-3 mb-5">
+      <%= f.label :内容 %><br>
+      <%= f.text_area :contents, class: "form-contents" %>
+    </div>
+
+    <%= f.hidden_field :customer_id, value: current_customer.id %>
+
+    <div class="actions">
+      <%= f.submit "記入", class: "btn btn-sm btn-dark w-100px" %>
+    </div>
+  <% end %>
+  <script>
+    $('#evaluate_stars').raty({
+      starOn: "<%= asset_path('star-on.png') %>",
+      starOff: "<%= asset_path('star-off.png') %>",
+      starHalf: "<%= asset_path('star-half.png') %>",
+      scoreName: 'review[evaluation]' //登録するモデル名とカラム名を記述
+    });
+  </script>
+
+</div>

@@ -85,6 +85,11 @@
               <% end %>
             </li>
             <li class="nav-item">
+              <%= link_to reviews_path, class: 'nav-link text-light  ml-2' do %>
+                口コミ
+              <% end %>
+            </li>
+            <li class="nav-item">
               <%= link_to destroy_customer_session_path, class: 'nav-link text-light  ml-2', method: :delete do %>
                 ログアウト
               <% end %>
@@ -108,6 +113,11 @@
             <li class="nav-item">
               <%= link_to plans_path, class: 'nav-link text-light  ml-2' do %>
                 プラン一覧
+              <% end %>
+            </li>
+            <li class="nav-item">
+              <%= link_to reviews_path, class: 'nav-link text-light  ml-2' do %>
+                口コミ
               <% end %>
             </li>
             <li class="nav-item">
