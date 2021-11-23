@@ -15,10 +15,12 @@
 //= require bootstrap-sprockets
 
 //= require jquery
+//= require jquery.raty.js
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
 
 
 // ターボリンク無効化:document.addEventListener("turbolinks:load")

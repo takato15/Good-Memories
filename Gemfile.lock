@@ -306,7 +306,7 @@ DEPENDENCIES
   dotenv-rails
   enum_help
   jbuilder (~> 2.5)
-  jquery-rails
+  jquery-rails (~> 4.3, >= 4.3.1)
   kaminari (~> 1.2.1)
   letter_opener
   listen (>= 3.0.5, < 3.2)

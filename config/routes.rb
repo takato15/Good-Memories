@@ -59,6 +59,8 @@ Rails.application.routes.draw do
 
     resources :calenders, only: [:index]
 
+    resources :reviews
+
   end
 
   # 管理者
