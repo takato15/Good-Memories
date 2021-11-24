@@ -1,8 +1,6 @@
-<div class="container my-5">
+<div class="container mt-5 mb-5 reserves-index">
 
-      <h3 class="text title-text">
-        予約履歴一覧
-      </h3>
+  <h2 class="text title-text">予約履歴一覧</h2>
 
 
 <% if @reserves.exists? %>
@@ -29,7 +27,9 @@
         <% end %>
       </tbody>
     </table>
-    <!--<div class="pagination">< %= paginate @reserves %></div>-->
+    <div class="pagination">
+      <%= paginate @reserves %>
+      </div>
   </div>
 
 

@@ -12,7 +12,7 @@
   <%= form_with model: @review, local: true do |f| %>
     <div class="review-form mt-3 mb-3">
       <%= f.label :タイトル %><br>
-      <%= f.text_field :title %>
+      <%= f.select :title, Review.titles.keys.map {|k| [I18n.t("enums.review.title.#{k}"), k]}, :prompt => "選択してください" %>
     </div>
 
     <div id="evaluate_stars">

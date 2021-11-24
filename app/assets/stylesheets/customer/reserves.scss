@@ -2,14 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.reserve-new {
-  display: block;
-}
-
-.reserve-confirm {
-  display: block!important;
-}
-
+.reserve-new,
+.reserves-index,
+.reserve-confirm,
 .reserves {
-  display: block;
+  display: block!important;
 }

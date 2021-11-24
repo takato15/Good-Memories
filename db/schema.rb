@@ -35,6 +35,8 @@ ActiveRecord::Schema.define(version: 2021_11_23_171849) do
     t.integer "customer_id"
     t.string "title"
     t.text "detail"
+    t.string "title_reply"
+    t.text "detail_reply"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -86,7 +88,7 @@ ActiveRecord::Schema.define(version: 2021_11_23_171849) do
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.string "title"
+    t.integer "title"
     t.float "evaluation"
     t.text "contents"
     t.integer "customer_id"
