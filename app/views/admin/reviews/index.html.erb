@@ -6,14 +6,6 @@
 
   <h2><%= "口コミ一覧 （全#{@reviews.count}件）" %></h2>
 
-  <% if customer_signed_in? %>
-    <div class="create-review text-right">
-      <%= link_to new_review_path, class: "btn btn-dark plus" do %>
-        <span class="material-icons md-24">add_box</span><i class="review-text"> 口コミを書く</i>
-      <% end %>
-    </div>
-  <% end %>
-
   <table class="table mt-5 mb-5">
     <thead>
       <tr>
@@ -35,8 +27,7 @@
                 <p><%= review.contents %></p>
               </details>
             </td>
-          <% if review.customer_id == current_customer.id %>
-            <td><%= link_to 'Edit', edit_review_path(review), class: "btn btn-sm btn-dark edit_review_#{review.id}" %></td>
+          <% if admin_signed_in? %>
             <td><%= link_to 'Destroy', review_path(review), method: :delete, data: { confirm: '本当に消しますか？' }, class: "btn btn-sm btn-danger destroy_book_#{review.id}"%></td>
           <% end %>
         </tr>

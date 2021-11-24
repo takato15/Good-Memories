@@ -1,17 +1,18 @@
-<h2>photographs</h2>
+<div class="container mt-5 mb-5 photos-index">
 
-<div class="col-md-10">
-      <h2><%= "写真一覧 （全#{@photos_all.count}件）" %></h2>
-
-        <div class="image-box">
-            <% @photos.each do |photo| %>
-                <div class="col-lg-3 col-md-3 mb-3">
-                        <%= attachment_image_tag(photo, :image, class: 'index-image') %><br>
-                    <% end %>
-                </div>
-            <% end %>
+  <h2><%= "photographs （全#{@photos_all.count}件）" %></h2>
+  
+  <div class="col-md-10">
+    <div class="image-box">
+      <% @photos.each do |photo| %>
+        <div class="col-lg-3 col-md-3 mb-3">
+          <%= attachment_image_tag(photo, :image, class: 'index-image') %><br>
         </div>
-
-        <%= paginate @photos %>
-
+      <% end %>
     </div>
+  
+    <%= paginate @photos %>
+  
+  </div>
+  
+</div>
