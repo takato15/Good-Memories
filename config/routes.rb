@@ -70,7 +70,7 @@ Rails.application.routes.draw do
     resources :tags, except: [:show, :new]
     resources :customers, except: [:new, :create, :destroy]
     resources :reserves, only: [:index, :show]
-    resources :contacts, except: [:show, :new, :destroy]
+    resources :contacts, except: [:show]
     resources :calenders, except: [:show, :destroy]
     resources :reviews, only: [:index, :destroy]
 

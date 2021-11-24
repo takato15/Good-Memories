@@ -11,6 +11,17 @@ ja:
         shichigosan: "七五三"
         friend: "友達"
 
+    review:
+      title:
+        bridal: "結婚式"
+        seizinshiki: "成人式"
+        maternity: "マタニティ"
+        child: "お子さま"
+        trip: "旅行"
+        couple: "カップル"
+        shichigosan: "七五三"
+        friend: "友達"
+
   date:
     abbr_day_names:
       - 日
@@ -69,8 +80,12 @@ ja:
       attributes:
         calender:
           start_time: "スケジュール変更日"
-          
+
         review:
           title: "タイトル"
           evaluation: "評価"
           contents: "内容"
+
+        contact:
+          title_reply: "タイトル"
+          detail_reply: "返信内容"
