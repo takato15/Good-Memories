@@ -20,6 +20,8 @@
       <%= f.text_area :detail, class: "form-control form-detail" %>
 
     <%= f.hidden_field :customer_id, value: current_customer.id %>
+    <%= f.hidden_field :name, value: current_customer.last_name %>
+    <%= f.hidden_field :email, value: current_customer.email %>
 
     <%= f.submit "送信", class: "btn btn-sm btn-dark mt-4" %>
   <% end %>

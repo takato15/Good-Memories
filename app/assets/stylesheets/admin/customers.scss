@@ -10,7 +10,7 @@
 
 .admin_customer_info,
 .admin_customer_edit {
-  height: 400px;
+  height: 500px;
 }
 
 .admin_customer_info td,
@@ -20,4 +20,8 @@
 
 label {
   margin-bottom: 0px!important;
+}
+
+td p {
+  margin-bottom: 0px;
 }

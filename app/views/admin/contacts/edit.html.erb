@@ -15,8 +15,10 @@
     <%= f.label :返信内容, class: "mt-4" %>
       <%= f.text_area :detail_reply, class: "form-control form-detail" %>
 
+    <%= f.hidden_field :email, value: @contact.email %>
     <%= f.hidden_field :title, value: @contact.title %>
     <%= f.hidden_field :detail, value: @contact.detail %>
+    <%= f.hidden_field :name, value: @contact.name %>
 
     <%= f.submit "送信", class: "btn btn-sm btn-dark mt-4" %>
   <% end %>

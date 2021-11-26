@@ -1,0 +1,15 @@
+<h2><%= @reserve.customer.last_name %> 様</h2>
+
+<p>
+  以下の撮影依頼がありました。
+</p>
+
+<h4>【撮影依頼内容】</h4><br>
+<p>・撮影希望日</p>
+<p><%= @reserve.reserve_day.strftime('%Y年%m月%d日') %></p><br>
+
+<p>・プラン名</p>
+<p><%= @reserve.plan_name_i18n %></p><br>
+
+<p>・人数</p>
+<p><%= @reserve.count %>名</p>

@@ -76,6 +76,19 @@ class Customer::RegistrationsController < Devise::RegistrationsController
     render :edit
   end
   end
+  
+  # 退会処理
+  def unsubclibe
+    @customer = current_customer
+  end
+  
+  # 退会処理（論理処理）
+  def withdraw
+    @customer = current_customer
+    @current_customer.update(is_deleted: true)
+    reset_session
+    redirect_to root_path
+  end
 
   private
 
@@ -91,6 +104,7 @@ class Customer::RegistrationsController < Devise::RegistrationsController
 
   private
 
+# ログイン後はマイページを表示
   def after_sign_up_path_for(resource)
     customers_path
   end
