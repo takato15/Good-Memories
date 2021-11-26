@@ -1,5 +1,4 @@
 class Admin::TagsController < ApplicationController
-  
   def index
     @tag = Tag.new
     @tags = Tag.all
@@ -27,7 +26,7 @@ class Admin::TagsController < ApplicationController
       render :edit
     end
   end
-  
+
   def destroy
     @tag = Tag.find(params[:id])
     @tag.destroy
@@ -35,8 +34,8 @@ class Admin::TagsController < ApplicationController
   end
 
   private
+
   def tag_params
     params.require(:tag).permit(:name)
   end
-  
 end

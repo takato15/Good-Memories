@@ -1,9 +1,8 @@
 class Admin::ReviewsController < ApplicationController
-  
   def index
     @reviews = Review.all
   end
-  
+
   def destroy
     @review = Review.find(params[:id])
     @review.destroy
@@ -15,5 +14,4 @@ class Admin::ReviewsController < ApplicationController
   def review_params
     params.require(:review).permit(:title, :evaluation, :contents, :customer_id)
   end
-  
 end
