@@ -49,13 +49,14 @@
               <th>メールアドレス</th>
               <td><%= f.text_field :email %></td>
             </tr>
-
-             <tr>
-               <th></th>
-               <td><%= f.submit '編集内容を保存',class: "btn btn-sm btn-dark mt-3" %></td>
-             </tr>
-
-             <!--<div class="text-right"><　%= link_to '退会する',unsubsclibe_path,class:"btn btn-danger" %></div>-->
+            <tr>
+              <th></th>
+              <td><%= f.submit '編集内容を保存',class: "btn btn-sm btn-dark mt-3" %></td>
+            </tr>
+            <tr>
+              <th></th>
+              <td><%= link_to '退会する',unsubsclibe_customers_path,class:"btn btn-danger" %></td>
+            </tr>
           </table>
           <% end %>
           </div>

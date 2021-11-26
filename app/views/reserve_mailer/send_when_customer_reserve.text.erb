@@ -1,0 +1,12 @@
+<%= @reserve.customer.last_name %> 様 から問い合わせがありました。
+
+【撮影依頼内容】
+
+・撮影希望日
+<%= @reserve.reserve_day.strftime('%Y年%m月%d日') %>
+
+・プラン名
+<%= @reserve.plan_name_i18n %>
+
+・人数
+<%= @reserve.count %>

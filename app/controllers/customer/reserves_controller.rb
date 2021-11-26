@@ -19,7 +19,7 @@ class Customer::ReservesController < ApplicationController
     @reserve = Reserve.new(reserve_params)
     if @reserve.save
       redirect_to complete_reserves_path
-      # redirect_to confirm_reserves(@reserve.id)
+      ReserveMailer.send_when_customer_reserve(@reserve).deliver_now
     else
       render :new
     end

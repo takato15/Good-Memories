@@ -11,7 +11,7 @@ class Customer::ContactsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
     if @contact.save(validate: false)
-      ContactMailer.send_mail(@contact).deliver_now
+      ContactMailer.send_when_customer_contact(@contact).deliver_now
       redirect_to contacts_path, notice: "お問い合わせを送信しました。"
     else
       render :new

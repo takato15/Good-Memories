@@ -1,6 +1,6 @@
 class ContactMailer < ApplicationMailer
 
-  def send_mail(contact)
+  def send_when_customer_(contact)
     @contact = contact
     mail(
       from: 'Good-Memories',
