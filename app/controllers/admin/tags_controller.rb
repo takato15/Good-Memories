@@ -5,9 +5,10 @@ class Admin::TagsController < ApplicationController
   end
 
   def create
+    @tags = Tag.all
     @tag = Tag.new(tag_params)
     if @tag.save
-      redirect_to admin_tags_path, notice: "タグを新規追加しました。"
+      flash[:notice] = "タグを新規追加しました。"
     else
       @tags = Tag.all
       render :index
@@ -28,9 +29,10 @@ class Admin::TagsController < ApplicationController
   end
 
   def destroy
+    @tags = Tag.all
     @tag = Tag.find(params[:id])
     @tag.destroy
-    redirect_to admin_tags_path, notice: "タグ情報を削除しました。"
+    flash[:notice] = "タグ情報を削除しました。"
   end
 
   private
