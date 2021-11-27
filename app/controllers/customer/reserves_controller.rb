@@ -12,10 +12,12 @@ class Customer::ReservesController < ApplicationController
     @reserve = Reserve.new(reserve_params)
     @reserve.customer_id = current_customer.id
     @reserve_price = 8000
+    render :new if @reserve.invalid?
   end
 
   def create
     @reserve = Reserve.new(reserve_params)
+    render :new and return if params[:back] || !@reserve.save
     if @reserve.save
       redirect_to complete_reserves_path
       ReserveMailer.send_when_customer_reserve(@reserve).deliver_now

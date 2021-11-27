@@ -1,6 +1,6 @@
 class Customer::ReviewsController < ApplicationController
   def index
-    @reviews = Review.all
+    @reviews = Review.all.page(params[:page]).per(10)
   end
 
   def create

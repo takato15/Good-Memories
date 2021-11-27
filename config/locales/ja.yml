@@ -55,6 +55,9 @@ ja:
       errors:
         messages:
           blank: "が入力されていません。"
+          taken: "が既に登録済みのものです。"
+          not_a_number: "は半角数字で入力してください。"
+          required: "が選択されていません。"
 
       attributes:
         calender:
@@ -68,6 +71,27 @@ ja:
         contact:
           title_reply: "タイトル"
           detail_reply: "返信内容"
+        
+        customer:
+          password: "パスワード"
+          post_cord: "郵便番号"
+          address: "住所"
+          phone_number: "電話番号"
+          email: "メールアドレス"
+          last_name: "姓"
+          last_name_kana: "名"
+          first_name: "セイ"
+          first_name_kana: "メイ"
+          
+        reserve:
+          plan_name: "プラン名"
+          count: "人数"
+          reserve_day: "撮影希望日"
+          
+        home:
+          tag: "タグ"
+          image: "写真"
+          tag_id: "タグ"
           
   views:
       pagination:
