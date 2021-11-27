@@ -1,14 +1,26 @@
-<h2>お問い合わせ内容</h2>
-    <%= form_for @contact, url: admins_contact_path do |f| %>
-        <h3>顧客名</h3>
-        <%= @contact.customer.last_name %>さん
-        <h3>問い合わせ日</h3>
-        <%= @contact.created_at.strftime("%Y年%m月%d日 ") %>
-        <h3>タイトル</h3>
-        <%= @contact.title %>
-        <h3>問い合わせ内容</h3>
-        <%= @contact.detail %>
-        <h3>返信</h3>
-        <%= f.text_area :reply, class:"form-control", placeholder: "返信内容" %>
-        <%= f.submit "送信" %>
+<div class="container mt-5 mb-5 contact-edit">
+
+  <h2>お問い合わせ：返信フォーム</h2>
+
+  <% if @contact.errors.any? %>
+    <%= @contact.errors.count %>件のエラー<br>
+    <% @contact.errors.full_messages.each do |message| %>
+      ・<%= message %><br>
     <% end %>
+  <% end %>
+
+  <%= form_with model: @contact, url: admin_contact_path, local: true do |f| %>
+    <%= f.label :タイトル, class: "mt-2" %>
+      <%= f.text_field :title_reply, class: "form-control form-title" %>
+    <%= f.label :返信内容, class: "mt-4" %>
+      <%= f.text_area :detail_reply, class: "form-control form-detail" %>
+
+    <%= f.hidden_field :email, value: @contact.email %>
+    <%= f.hidden_field :title, value: @contact.title %>
+    <%= f.hidden_field :detail, value: @contact.detail %>
+    <%= f.hidden_field :name, value: @contact.name %>
+
+    <%= f.submit "送信", class: "btn btn-sm btn-dark mt-4" %>
+  <% end %>
+
+</div>

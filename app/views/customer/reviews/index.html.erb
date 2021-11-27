@@ -1,0 +1,56 @@
+<div class="flash">
+	<%= flash[:notice] %>
+</div>
+
+<div class="container mt-5 mb-5 review-index">
+
+  <h2><%= "口コミ一覧 （全#{@reviews.count}件）" %></h2>
+
+  <% if customer_signed_in? %>
+    <div class="create-review text-right">
+      <%= link_to new_review_path, class: "btn btn-dark plus" do %>
+        <span class="material-icons md-24">add_box</span><i class="review-text"> 口コミを書く</i>
+      <% end %>
+    </div>
+  <% end %>
+
+  <table class="table mt-5 mb-5 contacts-index">
+    <thead>
+      <tr>
+        <th>タイトル</th>
+        <th>評価</th>
+        <th>内容</th>
+        <th colspan="2"></th>
+        <th colspan="2"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @reviews.each do |review| %>
+        <tr>
+          <td><%= review.title_i18n %></td>
+          <td class="review-evaluation" data-score="<%= review.evaluation %>"></td>
+          <td>
+              <details>
+                <summary>詳細を開く</summary>
+                <p><%= review.contents %></p>
+              </details>
+            </td>
+          <% if review.customer_id == current_customer.id %>
+            <td><%= link_to 'Edit', edit_review_path(review), class: "btn btn-sm btn-dark edit_review_#{review.id}" %></td>
+            <td><%= link_to 'Destroy', review_path(review), method: :delete, data: { confirm: '本当に消しますか？' }, class: "btn btn-sm btn-danger destroy_review_#{review.id}"%></td>
+          <% end %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <script>
+    $('.review-evaluation').raty({
+      readOnly: true,
+      score: function() {
+        return $(this).attr('data-score');
+      },
+      path: '/assets/'
+    });
+  </script>
+
+</div>

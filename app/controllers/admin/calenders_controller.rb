@@ -40,6 +40,4 @@ class Admin::CalendersController < ApplicationController
   def set_beginning_of_week
     Date.beginning_of_week = :sunday
   end
-
-
 end

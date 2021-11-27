@@ -1,0 +1,22 @@
+// Place all the styles related to the reviews controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.review-index,
+.new-review,
+.edit-review {
+  display: block!important;
+}
+
+.review-text {
+  vertical-align: middle;
+}
+
+.w-100px {
+  width: 100px !important;
+}
+
+.form-contents {
+  width: 400px!important;
+  height: 200px!important;
+}

@@ -1,25 +1,23 @@
 Rails.application.routes.draw do
-
   # 顧客用
   # URL /customers/sign_in ...
-  devise_for :customers,skip: [:passwords,], controllers: {
+  devise_for :customers, skip: [:passwords], controllers: {
     registrations: "customer/registrations",
-    sessions: 'customer/sessions'
+    sessions: 'customer/sessions',
   }
 
   # 管理者用
   # URL /admin/sign_in ...
-  devise_for :admin, skip: [:registrations, :passwords] ,controllers: {
-    sessions: "admin/sessions"
+  devise_for :admin, skip: [:registrations, :passwords], controllers: {
+    sessions: "admin/sessions",
   }
 
-  #顧客
+  # 顧客
   root to: "customer/plans#index"
   get "/about" => "customer/homes#about"
   get "/photographs" => "customer/homes#index"
 
   scope module: :customer do
-
     resource :customers, only: [:show, :edit, :update] do
       collection do
         get "unsubsclibe"
@@ -59,18 +57,17 @@ Rails.application.routes.draw do
 
     resources :calenders, only: [:index]
 
+    resources :reviews
   end
 
   # 管理者
   namespace :admin do
-
     resources :homes
     resources :tags, except: [:show, :new]
     resources :customers, except: [:new, :create, :destroy]
     resources :reserves, only: [:index, :show]
-    resources :contacts, except: [:show, :new, :destroy]
+    resources :contacts, except: [:show]
     resources :calenders, except: [:show, :destroy]
-
+    resources :reviews, only: [:index, :destroy]
   end
-
 end

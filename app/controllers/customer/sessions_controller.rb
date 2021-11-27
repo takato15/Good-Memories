@@ -28,14 +28,13 @@ class Customer::SessionsController < Devise::SessionsController
 
   protected
 
-
+  # 退会処理後にログイン時は、新規登録画面に遷移
   def customer_state
     @customer = Customer.find_by(email: params[:customer][:email])
     if @customer
-      if (@customer.valid_password?(params[:customer][:password]) && (@customer.is_deleted? == true))
+      if @customer.valid_password?(params[:customer][:password]) && (@customer.is_deleted? == true)
         redirect_to new_customer_registration_path
       end
     end
   end
-
 end

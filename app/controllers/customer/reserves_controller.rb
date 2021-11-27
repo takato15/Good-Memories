@@ -1,5 +1,4 @@
 class Customer::ReservesController < ApplicationController
-
   def index
     @reserves = Reserve.where(customer_id: current_customer.id).page(params[:page]).per(10)
   end
@@ -19,7 +18,7 @@ class Customer::ReservesController < ApplicationController
     @reserve = Reserve.new(reserve_params)
     if @reserve.save
       redirect_to complete_reserves_path
-      # redirect_to confirm_reserves(@reserve.id)
+      ReserveMailer.send_when_customer_reserve(@reserve).deliver_now
     else
       render :new
     end
@@ -28,8 +27,6 @@ class Customer::ReservesController < ApplicationController
   private
 
   def reserve_params
-    params.require(:reserve).permit(:customer_id, :count, :reserve_day, :plan_name )
+    params.require(:reserve).permit(:customer_id, :count, :reserve_day, :plan_name)
   end
-
 end
-

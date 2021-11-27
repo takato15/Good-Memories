@@ -40,8 +40,9 @@ h3 {
   padding: 10px;
 }
 
-.col {
-  justify-content: space-around;
+.row,
+.plans-image {
+  justify-content: space-between;
 }
 
 .overview, .plan-show {

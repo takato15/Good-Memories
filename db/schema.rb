@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_08_054812) do
+ActiveRecord::Schema.define(version: 2021_11_25_154528) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -35,8 +35,12 @@ ActiveRecord::Schema.define(version: 2021_11_08_054812) do
     t.integer "customer_id"
     t.string "title"
     t.text "detail"
+    t.string "title_reply"
+    t.text "detail_reply"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
+    t.string "email"
   end
 
   create_table "customers", force: :cascade do |t|
@@ -81,6 +85,15 @@ ActiveRecord::Schema.define(version: 2021_11_08_054812) do
     t.integer "count"
     t.datetime "reserve_day"
     t.integer "plan_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer "title"
+    t.float "evaluation"
+    t.text "contents"
+    t.integer "customer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
