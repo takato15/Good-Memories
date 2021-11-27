@@ -26,6 +26,12 @@
  .navbar {
   background-color: #e6f0f0;
  }
+ 
+ // ナビバーデザイン
+ .navbar-toggler{
+  border-color: white!important;
+  width: 100%;
+ }
 
  footer {
   height: 100px;
@@ -46,6 +52,12 @@
 
  main {
   font-family: 'Kiwi Maru', serif; /*google_font*/
+ }
+ 
+ // デバイスエラーメッセージ
+ #error_explanation{
+  padding: 0 20px;
+  color: #EE827d;
  }
 
  .reservesbtn {
