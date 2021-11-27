@@ -1,4 +1,8 @@
-<div class="container mt-5 mb-5 contact-index">
+<div class="flash">
+  <%= flash[:notice] %>
+</div>
+
+<div class="container mt-5 mb-2 contact-index">
 
   <h2 class="contact-title">お問い合わせ一覧</h2>
 
@@ -43,4 +47,8 @@
       </tbody>
     </table>
 
+</div>
+
+<div class="text-center mb-5">
+  <%= paginate @contacts %>
 </div>
