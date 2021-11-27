@@ -17,7 +17,7 @@ class Admin::HomesController < ApplicationController
     if @photo.save
       redirect_to admin_home_path(@photo.id), notice: "写真を新規追加しました。"
     else
-      render :new
+      render :new if @photo.invalid?
     end
   end
 

@@ -17,9 +17,9 @@
 </div>
 
 <div class="container mt-5 overview">
-  
+
   <h3>Good Memoriesとは？</h3>
-  
+
   <div class="row mt-3">
     <p class="col">
       Good Memoriesは些細な日常を -良い思い出- にする「出張撮影サービス」です。<br>
@@ -33,7 +33,7 @@
         <i class="far fa-calendar-alt"></i> 撮影可能スケジュール管理
       <% end %>
     </div><br>
-  <% else %>  
+  <% else %>
     <div class="calender">
       <%= button_to calenders_path, :class => 'ui button', method: :get do %>
         <i class="far fa-calendar-alt"></i> 撮影可能スケジュール
@@ -48,36 +48,52 @@
 
 </div>
 
+
 <div class="container mt-5 mb-5">
+  
   <h3>撮りたいシーンを選んでください</h3>
-  <div class="row">
+  <div class="row justify-content-center">
     <div class="col-md3 plans-image">
       <%= link_to bridal_plans_path, class: 'plans-icon' do %>
         <%= image_tag '結婚式.png', size: "250x250", class:'icon' %>
       <% end %>
+    </div>
+    <div class="col-md3 plans-image">
       <%= link_to seizinshiki_plans_path, class: 'plans-icon' do %>
         <%= image_tag '成人式.png', size: "250x250", class:'icon' %>
       <% end %>
+    </div>
+    <div class="col-md3 plans-image">
       <%= link_to maternity_plans_path, class: 'plans-icon' do %>
         <%= image_tag 'マタニティ.png', size: "250x250", class:'icon' %>
       <% end %>
+    </div>  
+    <div class="col-md3 plans-image">  
       <%= link_to child_plans_path, class: 'plans-icon' do %>
         <%= image_tag 'お子さま.png', size: "250x250", class:'icon' %>
       <% end %>
+    </div>  
+    <div class="col-md3 plans-image">  
       <%= link_to trip_plans_path, class: 'plans-icon' do %>
         <%= image_tag '旅行.png', size: "250x250", class:'icon' %>
       <% end %>
+    </div>  
+    <div class="col-md3 plans-image">  
       <%= link_to couple_plans_path, class: 'plans-icon' do %>
         <%= image_tag 'カップル.png', size: "250x250", class:'icon' %>
       <% end %>
+    </div>  
+    <div class="col-md3 plans-image">  
       <%= link_to shichigosan_plans_path, class: 'plans-icon' do %>
         <%= image_tag '七五三.png', size: "250x250", class:'icon' %>
       <% end %>
+    </div>
+    <div class="col-md3 plans-image">  
       <%= link_to friend_plans_path, class: 'plans-icon' do %>
         <%= image_tag '友達.png', size: "250x250", class:'icon' %>
       <% end %>
     </div>
 
-
-    </div>
   </div>
+  
+</div>

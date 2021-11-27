@@ -2,7 +2,7 @@
 	<%= flash[:notice] %>
 </div>
 
-<div class="container mt-5 mb-5 review-index">
+<div class="container mt-5 mb-3 review-index">
 
   <h2><%= "口コミ一覧 （全#{@reviews.count}件）" %></h2>
 
@@ -53,4 +53,8 @@
     });
   </script>
 
+</div>
+
+<div class="text-center mb-5">
+  <%= paginate @reviews %>
 </div>

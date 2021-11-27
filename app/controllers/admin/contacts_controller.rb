@@ -1,6 +1,6 @@
 class Admin::ContactsController < ApplicationController
   def index
-    @contacts = Contact.all
+    @contacts = Contact.all.order(created_at: :desc).page(params[:page]).per(10)
   end
 
   def edit
@@ -10,9 +10,13 @@ class Admin::ContactsController < ApplicationController
 
   def update
     contact = Contact.find(params[:id])
-    contact.update(contact_params)
-    ContactMailer.send_when_admin_reply(contact).deliver_now
-    redirect_to admin_contacts_path, notice: "お問い合わせ情報を送信しました。"
+    if contact.update(contact_params)
+      ContactMailer.send_when_admin_reply(contact).deliver_now
+      redirect_to admin_contacts_path, notice: "お問い合わせ情報を送信しました。"
+    else
+      @contact = Contact.find(params[:id])
+      render :edit
+    end
   end
 
   def destroy

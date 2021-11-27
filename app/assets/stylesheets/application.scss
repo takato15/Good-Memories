@@ -17,16 +17,23 @@
  @import "bootstrap";
  @import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=M+PLUS+Rounded+1c:wght@100&display=swap');
 
-
+// ヘッダー部分
  header {
   background-color: #e6f0f0;
   color: #888888;
+ }
+
+ // ナビバーデザイン
+ .navbar-toggler{
+  border-color: white!important;
+  width: 100%;
  }
 
  .navbar {
   background-color: #e6f0f0;
  }
 
+// フッター部分
  footer {
   height: 100px;
   font-family: 'Noto Sans JP',serif;
@@ -34,6 +41,8 @@
 	 background-size: cover;
 	 background-position: center;
   width: 100%;
+  display: flex;
+	 align-items: center;
  }
 
  .footer-text {
@@ -48,6 +57,12 @@
   font-family: 'Kiwi Maru', serif; /*google_font*/
  }
 
+ // デバイスエラーメッセージ
+ #error_explanation{
+  padding: 0 20px;
+  color: #EE827d;
+ }
+
  .reservesbtn {
   width: 80px!important;
   height: 40px;
@@ -58,3 +73,16 @@
   margin: 0!important;
   background-color: #e6f0f0;
  }
+
+ // バリデーション
+ .validates {
+  color: red;
+  margin-bottom: 10px;
+ }
+
+  // タブレットサイズ（768px以下設定）
+// @media screen and (max-width:768px) {
+//  .plans-image {
+//   justify-content: space-between;
+//  }
+// }
