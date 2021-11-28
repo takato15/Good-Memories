@@ -8,7 +8,7 @@ class Customer::CalendersController < ApplicationController
   private
 
   def calender_parameter
-    params.require(:blog).permit(:title, :start_at)
+    params.require(:calender).permit(:title, :start_at)
   end
 
   def set_beginning_of_week

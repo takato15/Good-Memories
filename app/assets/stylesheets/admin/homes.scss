@@ -9,27 +9,24 @@
   display: block!important;
 }
 
-.index-image {
-  width: 100%;
-  max-width: 100%;
-  height: 100%;
-}
-
-.image-box {
-  display: flex;
-  flex-wrap: wrap;
-}
-
- .pagination {
+.pagination {
    text-align: center;
   margin-left: 50px;
   margin: 0 5px;
   display: inline-block!important;
  }
- 
- .index-image {
+
+.index-box {
   width: 100%;
-  max-width: 100%;
-  height: 100%;
+  height: 400px;
+  text-align: center;
+  margin: auto;
+}
+
+.index-image {
+  width: 100%;
+  max-width: 300px;
+  min-width: 240px;
+  height: 60%;
   border-radius: 30px;
 }

@@ -31,11 +31,12 @@ ja:
       - 木
       - 金
       - 土
-      
+
     formats:
       default: "%Y/%m/%d"
       long: "%Y年%m月%d日(%a)"
       short: "%m/%d"
+
     month_names:
       -
       - 1月
@@ -71,7 +72,7 @@ ja:
         contact:
           title_reply: "タイトル"
           detail_reply: "返信内容"
-        
+
         customer:
           password: "パスワード"
           post_cord: "郵便番号"
@@ -82,17 +83,17 @@ ja:
           last_name_kana: "名"
           first_name: "セイ"
           first_name_kana: "メイ"
-          
+
         reserve:
           plan_name: "プラン名"
           count: "人数"
           reserve_day: "撮影希望日"
-          
+
         home:
           tag: "タグ"
           image: "写真"
           tag_id: "タグ"
-          
+
   views:
       pagination:
         first: '最初'
@@ -100,3 +101,7 @@ ja:
         previous: '前'
         next: '次'
         truncate: '...'
+
+      calender:
+        previous: '前月'
+        next: '次月'

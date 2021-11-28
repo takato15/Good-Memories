@@ -1,20 +1,21 @@
-<div class="container mt-5 mb-5 photographs">
+<div class="container mt-5 mb-5 photographs-title">
   <h2><%= "写真一覧 （全#{@photos_all.count}件）" %></h2>
 
     <!--<div class="col-md-2 text-center">-->
     <!--  < %= render 'genres_search', genres: @genres %>-->
     <!--</div>-->
+</div>
 
-  <div class="row mt-5">
+<div class="container mt-5 mb-5 photographs">
+  
+  <div class="row justify-content-center mt-5">
 
-    <div class="image-box">
-      <% @photos.each do |photo| %>
-        <div class="col col-md-4 index-box">
-            <%= attachment_image_tag(photo, :image, class: "index-image") %><br>
-        </div>
-      <% end %>
-    </div>
-
+    <% @photos.each do |photo| %>
+      <div class="col col-md-4 index-box">
+        <%= attachment_image_tag(photo, :image, class: "index-image") %><br>
+      </div>
+    <% end %>
+ 
   </div>
 
   <div class="text-center">
