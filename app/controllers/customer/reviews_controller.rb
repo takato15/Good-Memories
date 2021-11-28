@@ -1,6 +1,8 @@
 class Customer::ReviewsController < ApplicationController
+
   def index
     @reviews = Review.all.page(params[:page]).per(10)
+    @reviews_all = Review.all
   end
 
   def create
@@ -41,4 +43,5 @@ class Customer::ReviewsController < ApplicationController
   def review_params
     params.require(:review).permit(:title, :evaluation, :contents, :customer_id)
   end
+
 end

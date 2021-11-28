@@ -1,13 +1,15 @@
 <div class="container mt-5 mb-5 calender">
   <h2 class="mb-5">撮影可能スケジュール</h2>
-  
+
   <%= month_calendar events: @calenders do |date, calenders| %>
     <%= date.day %>
-  
+
     <% calenders.each do |calender| %>
-      <div>
-        <%= calender.title %>
-      </div>
+      <% if calender.title == true %>
+  		  <p class="OK text-center"><strong>撮影可</strong></p>
+			<% end %>
     <% end %>
+    
   <% end %>
+  
 </div>
