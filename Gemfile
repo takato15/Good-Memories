@@ -73,6 +73,7 @@ gem 'simple_calendar', '~> 2.0'
 gem 'momentjs-rails'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'rubocop-airbnb'
+gem 'carrierwave', '~> 2.0'
 
 gem 'dotenv-rails'
 group :production do

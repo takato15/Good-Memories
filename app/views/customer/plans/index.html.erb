@@ -44,6 +44,8 @@
         <i class="far fa-paper-plane"></i> 予約の流れ
       <% end %>
     </div><br>
+  <% end %>
+  <% if customer_signed_in? %>
     <div class="reservebtn">
       <%= button_to new_reserf_path, class: "ui button", method: :get do %>
         <i class="fas fa-laptop"></i> 予約
