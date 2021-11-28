@@ -31,7 +31,7 @@
                 <p><%= contact.detail %></p>
               </details>
             </td>
-            <% if contact.detail_reply.nil? %>
+            <% if contact.present? %>
               <td><p class="contact-reply">未返信</p></td>
             <% else %>
               <td>
