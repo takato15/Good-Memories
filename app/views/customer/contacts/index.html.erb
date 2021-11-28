@@ -23,16 +23,16 @@
           <th>回答</th>
         </tr>
       </thead>
-      
+
       <tbody>
         <% @contacts.each do |contact| %>
           <tr>
-            <% if contact.title_reply == nil %>
+            <% if contact.title_reply.nil? %>
             <% else %>
               <td><%= contact.title_reply %></td>
             <% end %>
-            
-            <% if contact.detail_reply == nil %>
+
+            <% if contact.detail_reply.nil? %>
             <% else %>
               <td>
                 <details>
@@ -47,7 +47,7 @@
     </table>
 
   </div>
-  
+
   <div class="text-center mb-5">
     <%= paginate @contacts %>
   </div>
