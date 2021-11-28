@@ -27,11 +27,13 @@
       <tbody>
         <% @contacts.each do |contact| %>
           <tr>
-            <% if contact.title_reply.present? %>
+            <% if contact.title_reply == nil %>
+            <% else %>
               <td><%= contact.title_reply %></td>
             <% end %>
             
-            <% if contact.detail_reply.present? %>
+            <% if contact.detail_reply == nil %>
+            <% else %>
               <td>
                 <details>
                   <summary>詳細を開く</summary>
