@@ -1,7 +1,7 @@
 class Customer::ReviewsController < ApplicationController
 
   def index
-    @reviews = Review.all.page(params[:page]).per(10)
+    @reviews = Review.all.order(created_at: :desc).page(params[:page]).per(10)
     @reviews_all = Review.all
   end
 

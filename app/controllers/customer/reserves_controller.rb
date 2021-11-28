@@ -1,6 +1,6 @@
 class Customer::ReservesController < ApplicationController
   def index
-    @reserves = Reserve.where(customer_id: current_customer.id).page(params[:page]).per(10)
+    @reserves = Reserve.where(customer_id: current_customer.id).order(created_at: :desc).page(params[:page]).per(10)
   end
 
   def new

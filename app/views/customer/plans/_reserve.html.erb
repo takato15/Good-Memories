@@ -1,5 +1,7 @@
-<div class="reserve-btn text-center mb-5">
-  <%= button_to new_reserf_path, class: "ui button reserve-btn", method: :get do %>
-    <i class="fas fa-laptop"></i> 予約
-   <% end %>
-</div>
+<% if customer_signed_in? %>
+  <div class="reserve-btn text-center mb-5">
+    <%= button_to new_reserf_path, class: "ui button reserve-btn", method: :get do %>
+      <i class="fas fa-laptop"></i> 予約
+     <% end %>
+  </div>
+<% end %>
