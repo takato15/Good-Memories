@@ -18,9 +18,9 @@
 
 .index-box {
   width: 100%;
+  min-width: 250px;
   height: 400px;
   text-align: center;
-  margin: auto;
 }
 
 .index-image {
@@ -29,6 +29,7 @@
   min-width: 240px;
   height: 60%;
   border-radius: 30px;
+  margin-left: 1px;
 }
 
 // ズーム動作時間
