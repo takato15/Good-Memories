@@ -31,16 +31,14 @@
                 <p><%= contact.detail %></p>
               </details>
             </td>
-            <% if contact.detail_reply.present? %>
+           
               <td>
                 <details>
                   <summary>返信内容を開く</summary>
                   <p><%= contact.detail_reply %></p>
                 </details>
               </td>
-            <% else %>
-              <td><p class="contact-reply">未返信</p></td>
-            <% end %>
+           
             <td><%= link_to 'Destroy', admin_contact_path(contact), method: :delete, data: { confirm: '本当に消しますか？' }, class: "btn btn-sm btn-danger destroy_contact_#{contact.id}"%></td>
           </tr>
         <% end %>
