@@ -9,9 +9,9 @@ class Admin::ContactsController < ApplicationController
   end
 
   def update
-    contact = Contact.find(params[:id])
-    if contact.update(contact_params)
-      ContactMailer.send_when_admin_reply(contact).deliver_now
+    @contact = Contact.find(params[:id])
+    if @contact.update(contact_params)
+      ContactMailer.send_when_admin_reply(@contact).deliver_now
       redirect_to admin_contacts_path, notice: "お問い合わせ情報を送信しました。"
     else
       @contact = Contact.find(params[:id])
