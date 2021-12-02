@@ -7,6 +7,7 @@ class Customer::ReviewsController < ApplicationController
 
   def create
     @review = Review.new(review_params)
+    @review.score = Language.get_data(review_params[:contents])  #この行を追加
     @review.customer_id = current_customer.id
     if @review.save
       redirect_to reviews_path, notice: "口コミを記載しました。"

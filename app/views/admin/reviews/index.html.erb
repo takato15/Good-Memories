@@ -22,14 +22,15 @@
           <td><%= review.title_i18n %></td>
           <td class="review-evaluation" data-score="<%= review.evaluation %>"></td>
           <td>
-              <details>
-                <summary>詳細を開く</summary>
-                <p><%= review.contents %></p>
-              </details>
-            </td>
-          <% if admin_signed_in? %>
-            <td><%= link_to 'Destroy', review_path(review), method: :delete, data: { confirm: '本当に消しますか？' }, class: "btn btn-sm btn-danger destroy_book_#{review.id}"%></td>
-          <% end %>
+            <details>
+              <summary>詳細を開く</summary>
+              <p><%= review.contents %></p>
+              <span class="sentiment-score">レビューの感情分析スコア【<%= review.score %>】</span><br>
+              <% if admin_signed_in? %>
+                <%= link_to 'Destroy', review_path(review), method: :delete, data: { confirm: '本当に消しますか？' }, class: "btn btn-sm btn-danger destroy_book_#{review.id}"%></td>
+              <% end %>
+            </details>
+          </td>
         </tr>
       <% end %>
     </tbody>
