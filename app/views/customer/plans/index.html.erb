@@ -28,11 +28,19 @@
   </div>
 
 
-  <div class="btn-box">
-    <%= link_to calenders_path do %>
-      <%= image_tag 'schedule.png', size: "400x100" %>
-    <% end %>
-  </div>
+  <% if admin_signed_in? %>
+    <div class="btn-box">
+      <%= link_to admin_calenders_path do %>
+        <%= image_tag 'schedule.png', size: "400x100" %>
+      <% end %>
+    </div>
+  <% else %>
+    <div class="btn-box">
+      <%= link_to calenders_path do %>
+        <%= image_tag 'schedule.png', size: "400x100" %>
+      <% end %>
+    </div>
+  <% end %>
   <div class="btn-box">
     <%= link_to flow_plans_path do %>
       <%= image_tag 'flow_btn.png', size: "400x100" %>
