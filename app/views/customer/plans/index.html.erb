@@ -27,30 +27,23 @@
     </p>
   </div>
 
-  <% if admin_signed_in? %>
-    <div class="calender">
-      <%= button_to admin_calenders_path, class: "ui button schedule-btn", method: :get do %>
-        <i class="far fa-calendar-alt"></i> 撮影可能スケジュール管理
-      <% end %>
-    </div><br>
-  <% else %>
-    <div class="calender">
-      <%= button_to calenders_path, class: "ui button schedule-btn", method: :get do %>
-        <i class="far fa-calendar-alt"></i> 撮影可能スケジュール
-      <% end %>
-    </div><br>
-    <div class="flow">
-      <%= button_to flow_plans_path, class: "ui button flow-btn", method: :get do %>
-        <i class="far fa-paper-plane"></i> 予約の流れ
-      <% end %>
-    </div><br>
-  <% end %>
+
+  <div class="btn-box">
+    <%= link_to calenders_path do %>
+      <%= image_tag 'schedule.png', size: "400x100" %>
+    <% end %>
+  </div>
+  <div class="btn-box">
+    <%= link_to flow_plans_path do %>
+      <%= image_tag 'flow_btn.png', size: "400x100" %>
+    <% end %>
+  </div>
   <% if customer_signed_in? %>
-    <div class="reservebtn">
-      <%= button_to new_reserf_path, class: "ui button", method: :get do %>
-        <i class="fas fa-laptop"></i> 予約
+    <div class="btn-box">
+      <%= link_to new_reserf_path do %>
+        <%= image_tag 'reserve_btn.png', size: "400x100" %>
       <% end %>
-    </div><br>
+    </div>
   <% end %>
 
 

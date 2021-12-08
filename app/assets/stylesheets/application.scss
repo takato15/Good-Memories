@@ -89,13 +89,33 @@
    width: 100%;
    font-size: 20px;
   }
-  
+
   .navbar-toggler{
    width: 100%;
   }
-  
+
   .logo img {
    width: 200px!important;
    height: 140px!important;
   }
+}
+
+// TOP画面ボタンデザイン
+.btn-box {
+ margin-bottom: 30px;
+ height: 100px;
+ width: 414px;
+ color: #474747;
+ background: whitesmoke;/*背景色*/
+ border-left: double 7px #4ec4d3;/*左線*/
+ border-right: double 7px #4ec4d3;/*右線*/
+}
+
+.btn-box img {
+  opacity: 1;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+.btn-box:hover img {
+  opacity: .5;
 }
