@@ -30,7 +30,9 @@ Good Memoriesは、お子様の成長記録や友達との思い出を写真に�
 - 結婚式の前撮りに
 
 ## 設計書
-作成後に添付。
+- ER図は[こちら](https://drive.google.com/file/d/15z3mNZ80MQCKFqMb29RFVo_srxQegPAy/view?usp=sharing)
+- テーブル定義書は[こちら](https://docs.google.com/spreadsheets/d/13ANyGaR1uEYEzTTw7VZ4dChRn-PvYpbbGz4yWgpbtps/edit#gid=1373217982)
+- 詳細設計書は[こちら](https://docs.google.com/spreadsheets/d/1CDKEVEbklun0yj3ZKjiGWhHGrW2hqIQWYeRtrZDAYY4/edit#gid=2133469642)
 
 ## チャレンジ要素一覧
 <https://docs.google.com/spreadsheets/d/1uMI7uMgCaMtABI_Kj8O0PpaN0olXxAEOj6_LYkKAVJU/edit?usp=sharing>
