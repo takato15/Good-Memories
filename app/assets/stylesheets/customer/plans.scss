@@ -109,3 +109,17 @@ h3 {
 .plan-image img, {
   transition: 1s all;
 }
+
+
+
+// 予約ボタンデザイン
+
+.reserve-box img {
+  opacity: 1;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.reserve-box:hover img {
+  opacity: .5;
+}

@@ -1,7 +1,7 @@
 <% if customer_signed_in? %>
-  <div class="reserve-btn text-center mb-5">
-    <%= button_to new_reserf_path, class: "ui button reserve-btn", method: :get do %>
-      <i class="fas fa-laptop"></i> 予約
-     <% end %>
+  <div class="reserve-box text-center mb-5">
+    <%= link_to new_reserf_path do %>
+      <%= image_tag 'plan_reserve_btn.png', size: "400x100", class: "reserve-image" %>
+    <% end %>
   </div>
 <% end %>
