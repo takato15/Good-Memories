@@ -5,5 +5,5 @@ class Home < ApplicationRecord
 
   validates :tag_id, presence: true
   validates :image, presence: true
-  
+
 end
