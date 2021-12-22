@@ -84,20 +84,21 @@
 
 // スマートフォンサイズ（480px以下）
 @media screen and (max-width: 480px){
-  header {
-   height: 150px;
-   width: 100%;
-   font-size: 20px;
-  }
+ header {
+  height: 150px;
+  width: 100%;
+  font-size: 20px;
+ }
 
-  .navbar-toggler{
-   width: 100%;
-  }
+ .navbar-toggler{
+  width: 100%;
+ }
 
-  .logo img {
-   width: 200px!important;
-   height: 140px!important;
-  }
+ .logo img {
+  width: 200px!important;
+  height: 140px!important;
+ }
+
 }
 
 // TOP画面ボタンデザイン
