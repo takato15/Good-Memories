@@ -1,4 +1,5 @@
 class Admin::ContactsController < ApplicationController
+  
   def index
     @contacts = Contact.all.order(created_at: :desc).page(params[:page]).per(10)
   end
@@ -30,4 +31,5 @@ class Admin::ContactsController < ApplicationController
   def contact_params
     params.require(:contact).permit(:customer_id, :name, :email, :title, :detail, :title_reply, :detail_reply)
   end
+  
 end

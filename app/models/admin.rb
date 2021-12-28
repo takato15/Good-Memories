@@ -4,6 +4,7 @@ class Admin < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  # バリデーション
   validates :email, presence: true, uniqueness: true
 
 end

@@ -1,4 +1,5 @@
 class Reserve < ApplicationRecord
+
   belongs_to :customer, optional: true
 
   # enum設定
@@ -7,6 +8,7 @@ class Reserve < ApplicationRecord
     child: 3, trip: 4, couple: 5, shichigosan: 6, friend: 7,
   }
 
+  # バリデーション
   with_options presence: true do
     validates :plan_name
     validates :count

@@ -1,4 +1,5 @@
 class Admin::TagsController < ApplicationController
+  
   def index
     @tag = Tag.new
     @tags = Tag.all
@@ -40,4 +41,5 @@ class Admin::TagsController < ApplicationController
   def tag_params
     params.require(:tag).permit(:name)
   end
+  
 end

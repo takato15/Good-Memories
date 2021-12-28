@@ -1,9 +1,13 @@
 class Home < ApplicationRecord
+
   attachment :image
 
   belongs_to :tag
 
-  validates :tag_id, presence: true
-  validates :image, presence: true
+  # バリデーション
+  with_options presence: true do
+    validates :tag_id
+    validates :image
+  end
 
 end

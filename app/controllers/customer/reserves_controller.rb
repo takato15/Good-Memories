@@ -1,4 +1,5 @@
 class Customer::ReservesController < ApplicationController
+  
   def index
     @reserves = Reserve.where(customer_id: current_customer.id).order(created_at: :desc).page(params[:page]).per(10)
   end
@@ -31,4 +32,5 @@ class Customer::ReservesController < ApplicationController
   def reserve_params
     params.require(:reserve).permit(:customer_id, :count, :reserve_day, :plan_name)
   end
+  
 end
