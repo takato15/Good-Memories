@@ -16,8 +16,8 @@
   <%= form_with model: [@tag], url: admin_tags_path, data: {remote: true} do |f| %>
     <div class="form-tag">
       <%= f.label :タグ名 %>
-      <%= f.text_field :name, class:"col-md-2", autofocus: true, id: "text" %>
-      <%= f.submit "新規登録" , class:"btn btn-sm btn-dark" %>
+      <%= f.text_field :name, class: "col-md-2", autofocus: true, id: "text" %>
+      <%= f.submit "新規登録" , class: "btn btn-sm btn-dark" %>
     </div>
   <% end %>
 
@@ -35,7 +35,5 @@
         <%= render 'admin/tags/index', tags: @tags %>
       </tbody>
     </table>
-
-
 
 </div>
