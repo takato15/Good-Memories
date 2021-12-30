@@ -1,25 +1,26 @@
 <div class="container mt-5 mb-5 photographs">
+
   <h2><%= "写真一覧 （全#{@photos_all.count}件）" %></h2>
-  
+
   <div class="text-right mb-4">
     <%= link_to "新規投稿", new_admin_home_path, class:"btn btn-sm btn-dark" %>
   </div>
 
 </div>
 
+
 <div class="container mt-5 mb-5 photographs">
 
   <div class="row justify-content-center mt-5">
-      
     <% @photos.each do |photo| %>
       <div class="col col-md-4 index-box">
-        <%= link_to admin_home_path(photo.id), style: "color: black;", data: {"turbolinks" => false} do %>
+        <%= link_to admin_home_path(photo.id), data: {"turbolinks" => false} do %>
           <%= attachment_image_tag(photo, :image, class: "index-image") %><br>
         <% end %>
       </div>
     <% end %>
   </div>
-  
+
   <div class="text-center">
     <%= paginate @photos %>
   </div>

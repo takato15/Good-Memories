@@ -3,32 +3,32 @@
 </div>
 
 <div class="container mt-5 mb-5 show-photo">
+
 	<h2>写真詳細</h2>
 
-  	<div class="row">
+  <div class="row">
 
-			<div class="col-md-5">
-				<div class="text-right">
-					<%= attachment_image_tag(@photo, :image, size: "300x217" ) %>
-				</div>
+		<div class="col-md-5">
+			<div class="text-center">
+				<%= attachment_image_tag(@photo, :image, size: "300x217" ) %>
 			</div>
-
-			<div class="col-md-6 ml-3">
-				<dl>
-				    <div class="form-group">
-					      <dt>タグ</dt>
-					      <dd>・<%= @photo.tag.name %></dd>
-				    </div>
-
-				</dl>
-				<div class="btn-edit mt-5">
-					<%= link_to "編集する", edit_admin_home_path(@photo.id), class:"btn btn-sl btn-dark" %>
-				</div>
-				<div class="btn-new mt-5">
-					<%= link_to "新規登録", new_admin_home_path, class:"btn btn-sl btn-dark" %>
-				</div>
-
-			</div>
-
 		</div>
+
+		<div class="col-md-6 ml-3">
+			<dl>
+				<div class="form-group">
+					<dt>タグ</dt>
+					<dd>・<%= @photo.tag.name %></dd>
+				</div>
+			</dl>
+			<div class="btn-edit mt-5">
+				<%= link_to "編集する", edit_admin_home_path(@photo.id), class: "btn btn-sl btn-dark" %>
+			</div>
+			<div class="btn-new mt-5">
+				<%= link_to "新規登録", new_admin_home_path, class: "btn btn-sl btn-dark" %>
+			</div>
+		</div>
+
+	</div>
+
 </div>

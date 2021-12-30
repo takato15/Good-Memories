@@ -16,6 +16,7 @@
         <th colspan="2"></th>
       </tr>
     </thead>
+    
     <tbody>
       <% @reviews.each do |review| %>
         <tr>
@@ -35,6 +36,7 @@
       <% end %>
     </tbody>
   </table>
+  
   <script>
     $('.review-evaluation').raty({
       readOnly: true,
@@ -48,6 +50,7 @@
   </script>
 
 </div>
+
 <div class="text-center mb-5">
   <%= paginate @reviews %>
 </div>
