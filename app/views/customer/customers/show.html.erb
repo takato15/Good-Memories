@@ -2,18 +2,19 @@
 	<%= flash[:notice] %>
 </div>
 
-<div class="container mt-5 " style="margin-bottom: 150px;">
+<div class="container mt-5 mb-5">
   <div class="row">
     <div class="col-md-12">
       <div class="text-center mypage">
         <h3 class="title">マイページ</h3>
 
         <table class="update">
-          <tr><th><h5><strong>登録情報</strong></h5></th>
+          <tr>
+            <th><h5><strong>登録情報</strong></h5></th>
             <td><%= link_to "編集する", edit_customers_path, class: "btn btn-sm btn-dark" %></td>
           </tr>
         </table>
-    
+
         <table class="table table-bordered customer_info">
           <tr>
             <th>氏名</th>
